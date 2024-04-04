@@ -23,15 +23,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout code
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
+    
       - name: Use Node.js 20
         uses: actions/setup-node@v3
         with:
           node-version: 20
-     
+
       - name: Deploy to Firebase
-        uses: w9jds/firebase-action@master
-        with:
-          args: deploy --only hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_QUANTUM_BEADS }}
+        run: |
+          cd ./repo/quantumbeads-firebase
+          npx firebase-tools deploy --only hosting --token ${{ secrets.FIREBASE_SERVICE_ACCOUNT_QUANTUM_BEADS }}

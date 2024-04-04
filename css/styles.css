@@ -1,0 +1,528 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontal */
+    /* Prevent overflow on x-axis */
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+   /* Set max-width to 100% and overflow-x to hidden */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* Adjust main content padding to account for fixed header */
+main {
+  padding-top: 60px;
+  margin-top: -100px; /* Adjust this value as needed */
+  flex-grow: 1; /* Take up remaining vertical space */
+}
+
+.top-nav {
+  background-color: #f8f9fadd;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.top-nav h1 {
+  color: #007bff;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  color: #007bffee;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 1080px; /* Limit the width */
+  height: auto;
+  background: url('webimages/quantumbeads.png') no-repeat center center/contain;
+  margin: auto; /* Center the content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dash-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(16, 40px);
+  grid-template-rows: repeat(3, 40px);
+  row-gap: 5px;
+  column-gap: 15px;
+  width: 100%;
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+  max-width: 960px; /* You can adjust this value to suit your design */
+  margin-top: 60px;
+}
+
+.dash {
+  width: 20px;
+  height: 2px;
+  background: rgb(251, 6, 6);
+  transition: transform 0.3s ease;
+}
+
+#dash-container:hover .dash {
+  transform: rotate(270deg); /* Rotate all dashes when the container is hovered over */
+}
+
+/* Advertisement Space */
+.ad-space {
+  margin: 1rem 0;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Content Sections */
+.featured-content, .latest-news, .event1, .event1-image, .event1-text, .about-quantum-homepage,
+.about-quantum-aboutpage, .founder-section, .about-me, 
+.The-Genesis-of-QuantumBeads, .Our-Mission, 
+.The-Future-Vision, .Join-Us-on-This-Quantum-Voyage, .global-quantum-events, .quantum-winter-school-2024 {
+  padding: 2rem;
+  margin: 1rem auto; /*centered horizonatly*/
+  max-width: 100%; /* Prevent overflow */
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.featured-content {
+  background-color: #f0f0f0d4; /* Replace with your desired color */
+  position: relative;
+  z-index: 1;
+}
+
+.latest-news {
+  background-color: #f0f0f0d4; /* Replace with your desired color */
+  position: relative;
+  z-index: 1;
+}
+
+.event1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.event1-text {
+  flex: 1;
+  z-index: 1;
+}
+
+.event1-image {
+  width: 20%; /* Adjust as needed */
+  height: auto;
+  z-index: 1;
+}
+
+.about-quantum-homepage {
+  padding: 30px;
+  background-color: #f9f9f9;
+  color: #333;
+  text-align: center;
+  z-index: 1;
+}
+
+.about-quantum-homepage h2 a {
+  text-decoration: none; /* Remove underline */
+  color: blue; /* Inherit the color from the parent element */
+}
+
+.about-quantum-homepage h2 a:hover {
+  color: inherit; /* Keep the color the same on hover */
+}
+/* ============
+   Home Page founder-section Styles
+   ============ */
+/* Founder Section */
+.founder-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.founder-section div {
+  margin-left: 20px; /* Adjust as needed */
+}
+.founder-image-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.founder-image {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+}
+
+.personal-linkedin-icon {
+  position: absolute;
+  bottom: 4px;
+  left: 70px;
+  width: 30px;
+  height: auto;
+}
+
+/* ============
+   About Page Styles
+   ============ */
+.about-quantum-aboutpage h2 {
+  font-size: 2em;
+  margin-bottom: 0px;
+  text-align: center;
+  z-index: 1;
+}
+.about-quantum-aboutpage h3 {
+  color: #002280; /* Change this to the color you want */
+}
+.about-quantum-aboutpage p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-align: center; /* Add this line */
+}
+.about-me{
+  background-color: #f0f0f0d4; /* Replace with your desired color */
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.The-Genesis-of-QuantumBeads{
+  background-color: #f0f0f0d4; /* Replace with your desired color */
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.Our-Mission{
+  background-color: #f0f0f0d4; /* Replace with your desired color */
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.The-Future-Vision{
+  background-color: #f0f0f0d4; /* Replace with your desired color */
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.Join-Us-on-This-Quantum-Voyage {
+  background-color: #f0f0f0d4; /* Replace with your desired color */
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+/* ============
+   Events Page Styles
+   ============ */
+.global-quantum-events, .quantum-winter-school-2024{
+  background-color: #f0f0f0df; /* Replace with your desired color */
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 1080px; /* Limit the width */
+  margin: auto; /* Center the content */
+}
+.global-quantum-events h2, .quantum-winter-school-2024 h2{
+  background-color: #f0f0f0df; /* Replace with your desired color */
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 1080px; /* Limit the width */
+  margin: auto; /* Center the content */
+}
+.quantum-winter-school-2024 img {
+  display: block; /* Remove the default inline-block */
+  width: 100%; /* Adjust as needed */
+  max-width: 1080px; /* Adjust as needed */
+  height: auto;
+  margin: auto;
+}
+
+/* ============
+   qedu (Learn) Page Styles
+   ============ */
+.quantum-education {
+   position: relative;
+  left: 0;
+  z-index: 1;
+}
+
+.quantum-education h3 {
+  font-size: 1em;
+  margin-top:160px;
+  color: #474756;
+}
+
+.quantum-education p {
+  color: #211e1e;
+  text-align: left;
+}
+/* ============
+side bar of qedu (Learn) Page Styles
+   ============ */
+   .sidebar {
+    position: absolute;
+    justify-content: center;
+    width: auto;
+    height: 50%;
+    left: 5px;
+    border-radius: 10px; /* Adjust as needed */
+  }
+  
+  .sidebar::before {
+    content: "";
+    position: absolute;
+    top: -30px; /* Adjust as needed */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(81, 138, 194, 0.79);
+    border-radius: 10px;
+    z-index: -1;
+  }
+  
+  .quantum-subfields {
+    text-align: left;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+  }
+  
+  .quantum-subfields .subfield {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+  
+  .quantum-subfields .subfield img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .content {
+    width: 75%;
+    margin-left: 22%;
+  }
+  
+  .subfield-content {
+    display: none;
+  }
+  
+  .subfield {
+    padding-left: 10px; /* Adjust as needed */
+    cursor: pointer;
+  }
+  
+  .subfield:hover {
+    color: rgb(44, 89, 238); /* Replace with your desired color */
+  }
+/* ============
+ Footer Styles for all pages
+   ============ */
+footer {
+  background-color: #f8f9fa;
+  padding: 0;
+  text-align: center;
+  box-shadow: 0 -2px 2px rgba(0,0,0,.1);
+  bottom: 0;
+  width: 100%;
+}
+.contact-container {
+  display: flex;
+  align-items: center; /* This will vertically center the items */
+  justify-content: center; /* This will horizontally center the items */
+}
+
+.footer-content, .footer-links {
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.social-icon {
+  width: 32px;  /* or any size you want */
+  height: auto; /* to maintain aspect ratio */
+}
+.footer-links ul li {
+  margin: 0 5px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #007bff;
+}
+
+footer p {
+  color: #666;
+}
+
+/* ============
+   Adjust media styles for different screens 
+   small or big
+   ============ */
+
+/* Responsive Design Adjustments */
+@media (max-width: 600px) {
+  body {
+    align-items: flex-start; /* Align items to the start instead of center */
+  }
+
+  .hero-image {
+    height: auto; /* Adjust height */
+    background-size: cover; /* Adjust background size */
+  }
+
+  .latest-news, .event1, .featured-content /* Add other classes as needed */ {
+    width: 100%; /* Full width */
+    margin: 1rem 0; /* Adjust margins */
+    padding: 1rem; /* Adjust padding */
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+  /* Adjust other elements as needed */
+  .event1, .event1-text, .about-quantum-homepage,
+  .about-quantum-aboutpage, .founder-section, .about-me, 
+  .The-Genesis-of-QuantumBeads, .Our-Mission, 
+  .The-Future-Vision, .Join-Us-on-This-Quantum-Voyage, .global-quantum-events, .quantum-winter-school-2024 {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    width: 100%; /* Full width */
+    margin: 1rem 0; /* Adjust margins */
+  }
+
+  .founder-section {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative; /* Change position */
+    width: 100%; /* Adjust width */
+    left: 0; /* Align to left */
+  }
+
+  main {
+    padding-top: 0px; /* Adjust this value as needed */
+    margin-top: 30px; /* Remove the negative margin */
+    /* Adjust the main layout for mobile */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align content to the start */
+    width: 100%; /* Full width */
+    margin: 0; /* Remove any specific margins */
+  }
+
+  #dash-container {
+    /* Adjust dash container for mobile */
+    grid-template-columns: repeat(8, 1fr); /* Adjust the number of columns */
+    grid-template-rows: repeat(6, 1fr); /* Adjust the number of columns */
+    row-gap: 10px; /* Adjust as needed */
+    column-gap: auto; /* Adjust as needed */
+    justify-items: center; /* Center items within the grid */
+    width: 100%; /* Full width */
+    max-width: none; /* Remove max-width */
+  }
+
+  .dash {
+    /* Adjust dash items for mobile */
+    width: 15px; /* Adjust width */
+    height: 2px; /* Adjust height */
+  }
+
+  .top-nav, .footer-links ul {
+    flex-direction: column;
+  }
+
+  .top-nav h1, nav ul {
+    margin-bottom: 1rem;
+  }
+
+  .top-nav nav ul li, .footer-links ul li {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .founder-section img {
+    margin: 0 auto 2rem auto;
+  }
+
+  .event1-image {
+    width: 100%; /* Adjust as needed for mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .founder-image-container, .personal-linkedin-icon {
+    /* Adjust founder images and icons for mobile */
+    width: 80px; /* Adjust width */
+    height: 80px; /* Adjust height */
+    left: calc(50% - 100px); /* Center horizontally */
+  }
+
+  .personal-linkedin-icon {
+    left: 60px; /* Adjust position */
+    width: 30px; /* Adjust size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+}

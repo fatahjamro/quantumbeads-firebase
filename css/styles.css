@@ -103,7 +103,7 @@ nav a:hover {
 .dash {
   width: 20px;
   height: 2px;
-  background: rgb(251, 6, 6);
+  background: rgb(226, 5, 215);
   transition: transform 0.3s ease;
 }
 

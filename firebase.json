@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "repo/quantumbeads-firebase",
+    "public": "./repo/quantumbeads-firebase",
     "ignore": [
       "firebase.json",
       "**/.*",

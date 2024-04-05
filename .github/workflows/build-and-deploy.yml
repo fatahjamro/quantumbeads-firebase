@@ -34,5 +34,7 @@ jobs:
         run: |
           cd ./repo/quantumbeads-firebase
           npx firebase-tools deploy --only hosting --token ${{secrets.FIREBASE_SERVICE_ACCOUNT_QUANTUM_BEADS}}
+      - name: Set Default Firebase Project
+        run: firebase use --add
       - name: Print working directory
         run: pwd && ls -la

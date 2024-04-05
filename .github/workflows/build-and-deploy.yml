@@ -32,7 +32,7 @@ jobs:
 
       - name: Deploy to Firebase
         run: |
-          cd ./repo/quantumbeads-firebase
+          cd ./repo/
           npx firebase-tools deploy --only hosting --token ${{secrets.FIREBASE_SERVICE_ACCOUNT_QUANTUM_BEADS}}
       - name: Print working directory
         run: pwd && ls -la

@@ -118,9 +118,24 @@ nav a:hover {
   padding: 1rem;
   text-align: center;
 }
+.qubit-models{
+  position: relative;
+  margin: 1rem 0;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Responsive iframe styles */
+iframe {
+  width: 100%; /* Set width to 100% for full width on all devices */
+  aspect-ratio: 16/9; /* Maintain aspect ratio of 16:9 */
+  border: none; /* Remove border */
+  max-height: 800px; /* Limit the height to 600px */
+}
 
 /* Content Sections */
-.featured-content, .latest-news, .event1, .event1-image, .event1-text, .about-quantum-homepage,
+.featured-content, .activity, .event1, .about-quantum-homepage,
 .about-quantum-aboutpage, .founder-section, .about-me, 
 .The-Genesis-of-QuantumBeads, .Our-Mission, 
 .The-Future-Vision, .Join-Us-on-This-Quantum-Voyage, .global-quantum-events, .quantum-winter-school-2024 {
@@ -138,31 +153,33 @@ nav a:hover {
   z-index: 1;
 }
 
-.latest-news {
+.activity {
   background-color: #f0f0f0d4; /* Replace with your desired color */
   position: relative;
   z-index: 1;
 }
 
+.event-box {
+  padding: 5px;
+  margin: 5px 0;
+}
 .event1 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  z-index: 1;
 }
 
-.event1-text {
-  flex: 1;
-  z-index: 1;
+.event1-text,
+.event1-image {
+  margin: 5;
+  padding: 5;
 }
 
 .event1-image {
-  width: 20%; /* Adjust as needed */
+  width: 50%;
   height: auto;
-  z-index: 1;
+  margin-left: 20%; /* Align to the right side margin of .event1 */
 }
-
 .about-quantum-homepage {
   padding: 30px;
   background-color: #f9f9f9;
@@ -425,7 +442,7 @@ footer p {
    ============ */
 
 /* Responsive Design Adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   body {
     align-items: flex-start; /* Align items to the start instead of center */
   }
@@ -434,8 +451,12 @@ footer p {
     height: auto; /* Adjust height */
     background-size: cover; /* Adjust background size */
   }
-
-  .latest-news, .event1, .featured-content /* Add other classes as needed */ {
+  .iframe {
+    width: 100%; /* Adjust width as needed */
+    height: 500px; /* Adjust height as needed */
+    border: none; /* Remove border */
+  }
+  .activity, .event1, .featured-content /* Add other classes as needed */ {
     width: 100%; /* Full width */
     margin: 1rem 0; /* Adjust margins */
     padding: 1rem; /* Adjust padding */
@@ -472,7 +493,6 @@ footer p {
     width: 100%; /* Full width */
     margin: 0; /* Remove any specific margins */
   }
-
   #dash-container {
     /* Adjust dash container for mobile */
     grid-template-columns: repeat(8, 1fr); /* Adjust the number of columns */
@@ -489,7 +509,6 @@ footer p {
     width: 15px; /* Adjust width */
     height: 2px; /* Adjust height */
   }
-
   .top-nav, .footer-links ul {
     flex-direction: column;
   }
@@ -508,7 +527,8 @@ footer p {
   }
 
   .event1-image {
-    width: 100%; /* Adjust as needed for mobile */
+    margin-left: auto;
+    width: 60%; /* Adjust as needed for mobile */
     height: auto; /* Maintain aspect ratio */
   }
 

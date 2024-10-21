@@ -1,0 +1,1 @@
+{"rule":"ADVERB_OR_HYPHENATED_ADJECTIVE","sentence":"^\\QYet there is no single standardized technology to make quantum computer till 2024.</li> <li>There are various models for making qubit (quantum bit).</li> <li>Each technology has strengths and weaknesses.\\E$"}

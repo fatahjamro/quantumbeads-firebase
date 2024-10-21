@@ -8,3 +8,32 @@ window.onload = function() {
     });
   });
 };
+
+// New code for the toggle button
+document.getElementById('toggle-abstract').addEventListener('click', function() {
+  var abstract = document.getElementById('abstract');
+  if (abstract.style.display === 'none' || abstract.style.display === '') {
+    abstract.style.display = 'block';
+  } else {
+    abstract.style.display = 'none';
+  }
+});
+
+// New code for the About Me toggle button
+document.getElementById('toggle-about-me').addEventListener('click', function() {
+  var aboutMeContent = document.getElementById('about-me-content');
+  if (aboutMeContent.style.display === 'none' || aboutMeContent.style.display === '') {
+    aboutMeContent.style.display = 'block';
+  } else {
+    aboutMeContent.style.display = 'none';
+  }
+});
+
+document.getElementById('thumbnail').addEventListener('click', function() {
+  var fullContent = document.getElementById('full-content');
+  if (fullContent.style.display === 'none' || fullContent.style.display === '') {
+      fullContent.style.display = 'block';
+  } else {
+      fullContent.style.display = 'none';
+  }
+});

@@ -13,16 +13,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center horizontal */
-    /* Prevent overflow on x-axis */
-  overflow-x: hidden;
+    /* overflow on x-axis slide bar */
+  overflow-x: auto;
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: 5px;
+  padding: 0px;
    /* Set max-width to 100% and overflow-x to hidden */
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 /* Adjust main content padding to account for fixed header */
 main {
@@ -31,6 +31,7 @@ main {
   flex-grow: 1; /* Take up remaining vertical space */
 }
 
+/* Navigation bar styles */
 .top-nav {
   background-color: #f8f9fadd;
   padding: 1rem;
@@ -52,6 +53,8 @@ main {
 nav ul {
   list-style-type: none;
   display: flex;
+  width: 100%; /* Ensure the ul takes full width (I added this line on 20/10/2024
+  ) */
 }
 
 nav ul li {
@@ -62,9 +65,36 @@ nav a {
   text-decoration: none;
   color: #333;
   padding: 0.5rem;
+  font-weight: bold; /* Make text bold */
+
 }
 
 nav a:hover {
+  color: #007bffee;
+}
+
+/* Position the box-fatah div at the right top corner */
+.box-fatah {
+  position: fixed;
+  top: 10px; /* Adjust as needed */
+  right: 90px; /* Adjust as needed */
+  z-index: 1100; /* Ensure it is in front of the navigation bar */
+  background-color: #e2e07def; /* Optional: Add background color */
+  padding: 5px; /* Optional: Add padding */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-fatah a {
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+  /*font-weight: bold; /* Make text bold */
+}
+
+.box-fatah a:hover {
   color: #007bffee;
 }
 
@@ -77,6 +107,18 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Center the abdul-fatah section on Abdul-fatah-Jamro.html */
+.abdul-fatah {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add background color with transparency */
+  padding: 20px; /* Optional: Add padding */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  position: absolute; /* Position it absolutely within the hero-image */
+  top: 70%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to be truly centered */
 }
 
 .main {
@@ -117,13 +159,11 @@ nav a:hover {
   background-color: #f8f9fa;
   padding: 1rem;
   text-align: center;
-}
-.qubit-models{
-  position: relative;
-  margin: 1rem 0;
-  background-color: #f8f9fa;
-  padding: 1rem;
-  text-align: center;
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
 }
 
 /* Responsive iframe styles */
@@ -131,14 +171,17 @@ iframe {
   width: 100%; /* Set width to 100% for full width on all devices */
   aspect-ratio: 16/9; /* Maintain aspect ratio of 16:9 */
   border: none; /* Remove border */
-  max-height: 800px; /* Limit the height to 600px */
+  max-height: 728px; /* Limit the height to 600px */
 }
 
 /* Content Sections */
-.featured-content, .activity, .event1, .about-quantum-homepage,
-.about-quantum-aboutpage, .founder-section, .about-me, 
-.The-Genesis-of-QuantumBeads, .Our-Mission, 
-.The-Future-Vision, .Join-Us-on-This-Quantum-Voyage, .global-quantum-events, .quantum-winter-school-2024 {
+.qubit-models, .featured-content, .activity, .event1, .about-quantum-homepage, .founder-section, /* home page */
+.about-quantum-aboutpage, .The-Genesis-of-QuantumBeads, .Our-Mission, 
+.The-Future-Vision, .Join-Us-on-This-Quantum-Voyage, /*About page*/
+.global-quantum-events, .quantum-winter-school-2024, /*Events page*/
+.featured-blogs, .blog-qubit-types, /*blogs page*/
+.about-me /*Abdul-fatah-Jamro*/
+ {
   padding: 2rem;
   margin: 1rem auto; /*centered horizonatly*/
   max-width: 100%; /* Prevent overflow */
@@ -146,6 +189,7 @@ iframe {
   border: 1px solid #eaeaea;
   border-radius: 10px;
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  overflow-x: auto; /* Allow horizontal scrolling */
 }
 .featured-content {
   background-color: #f0f0f0d4; /* Replace with your desired color */
@@ -389,6 +433,62 @@ side bar of qedu (Learn) Page Styles
     color: rgb(44, 89, 238); /* Replace with your desired color */
   }
 /* ============
+   Fatah page Styles
+   ============ */
+/* Abstract toggle button */
+/* Styles for the toggle link */
+.toggle-abstract {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+/* Initially hide the abstract */
+.abstract {
+  display: none;
+}
+
+/*====
+blogs page 
+======*/
+.subheading img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Images */ 
+.blog-qubit-types img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+.thumbnail {
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.full-content {
+  display: none;
+}
+
+.standard-image {
+  width: 50px; /* Set the desired width */
+  height: 50px; /* Set the desired height */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  display: block; /* Ensure the image is displayed as a block element */
+  margin: 10px 0; /* Add some margin around the image */
+}
+.blog-qubit-types {
+  font-family: 'Courier', serif; /* Change to your desired font */
+}
+
+  
+/* ============
  Footer Styles for all pages
    ============ */
 footer {
@@ -442,31 +542,44 @@ footer p {
    ============ */
 
 /* Responsive Design Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   body {
     align-items: flex-start; /* Align items to the start instead of center */
   }
+  .box-fatah {
+    position: relative;
+    top: 110px;
+    right: auto;
+    margin: 10px auto; /* Center horizontally */
+    z-index: 1100; /* Ensure it is in front of the navigation bar */
+  }
 
-  .hero-image {
+  .hero-image  {
     height: auto; /* Adjust height */
+    background-position: right center; /* show the right side of the image */
     background-size: cover; /* Adjust background size */
   }
-  .iframe {
+
+  iframe {
     width: 100%; /* Adjust width as needed */
     height: 500px; /* Adjust height as needed */
     border: none; /* Remove border */
   }
-  .activity, .event1, .featured-content /* Add other classes as needed */ {
+  .activity, .event1, .featured-content,.featured-blogs /* Add other classes as needed */ {
     width: 100%; /* Full width */
+    flex-direction: column; /* Stack items vertically */
     margin: 1rem 0; /* Adjust margins */
     padding: 1rem; /* Adjust padding */
     box-sizing: border-box; /* Include padding in width calculation */
+    overflow-x: auto; /* Allow horizontal scrolling */
   }
   /* Adjust other elements as needed */
   .event1, .event1-text, .about-quantum-homepage,
-  .about-quantum-aboutpage, .founder-section, .about-me, 
-  .The-Genesis-of-QuantumBeads, .Our-Mission, 
-  .The-Future-Vision, .Join-Us-on-This-Quantum-Voyage, .global-quantum-events, .quantum-winter-school-2024 {
+  .founder-section, .about-me, 
+  .about-quantum-aboutpage, .The-Genesis-of-QuantumBeads, .Our-Mission, 
+  .The-Future-Vision, .Join-Us-on-This-Quantum-Voyage,
+  .blog-qubit-types, 
+  .global-quantum-events, .quantum-winter-school-2024 {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items */
     width: 100%; /* Full width */
@@ -491,7 +604,7 @@ footer p {
     align-items: center; /* Center items horizontally */
     justify-content: flex-start; /* Align content to the start */
     width: 100%; /* Full width */
-    margin: 0; /* Remove any specific margins */
+    margin: 0px; /* Remove any specific margins */
   }
   #dash-container {
     /* Adjust dash container for mobile */

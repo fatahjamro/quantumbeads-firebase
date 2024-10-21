@@ -191,6 +191,11 @@ iframe {
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
   overflow-x: auto; /* Allow horizontal scrolling */
 }
+.qubit-models {
+  background-color: #f0f0f0d4; /* Replace with your desired color */
+  position: relative;
+  z-index: 1;
+}
 .featured-content {
   background-color: #f0f0f0d4; /* Replace with your desired color */
   position: relative;

@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>QuantumBeads</title>
+        <title>Quantum computing articles</title>
         <link rel="stylesheet" href="../css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -14,8 +15,9 @@
                     <ul>
                         <li><a href="../index.html">Home</a></li>
                         <li><a href="../html/about.html">About</a></li>
-                        <!--li><a href="./blogs.html">Blogs</a></li>-->
+                        <li><a href="./blogs.html">Blogs</a></li>
                         <li><a href="../events/events.html">Events</a></li>
+                        <!--li><a href="../qedu/qedu.html">Learn</a></li>-->
                     </ul>
                 </nav>
             </div>
@@ -26,10 +28,63 @@
         <main>
           <section class="featured-blogs">
             <h2>Featured Bolgs</h2>
-            <a href="https://www.example.com/blog-post" target="_blank">Read this interesting piece of writing.</a>
+            <p> Interesting blogs on quantum technologies</p>
         </section>
-          </main>
-
+        <section class="blog-qubit-types">
+          <div class="Author">
+            <p>Article:
+            <a href="Abdul-Fatah-Jamro.html"> Abdul Fatah Jamro</a></p>
+        </div>
+            <h2>Practical Realization of Qubit</h2>
+            <p>Quantum bit or Qubit is the basic unit of quantum information. Qubits, the essential building blocks of quantum information, appear in several forms across existing quantum computing technologies. As of 2024, the field lacks a standardized method for constructing quantum computers, leading to a range of experimental approaches to developing qubit as a unit of quantum information.</p>
+              <img src="../webimages/qubit.jpeg" alt="Qubit">
+            <p>Each technology is better in their own right, each has strengths and weaknesses. The most common types of qubits are mentioned here:</p>          
+                <div class="subheading">
+                    <h3>1. Superconducting Qubit</h3>
+                    <p>Superconducting qubit is a key player in solid-state quantum computing, it harnesses superconducting electronic circuits. These circuits enable quantum computing by exploiting the unique properties of superconductors to process quantum information efficiently under very low temperature (~4 milli kelvin).</p>
+                    <img src="../webimages/superconductiong-qubit.jpeg" alt="Superconducting qubit">
+                </div>
+                <div class="subheading">
+                    <h3>2. Photonic Qubit</h3>
+                    <p>Photonic Quantum Computing (PQC) employs individual photons, or particles of light, as qubits to manipulate and process quantum information. This approach leverages the intrinsic properties of light to perform quantum computations. photonic quantum computing can be performed at room temperature. This is one of the significant advantages of using photons as qubits, as they do not require the extreme cooling that other types of quantum systems, like superconducting qubits, typically need</p>
+                    <img src="../webimages/photonic-qubit.jpeg" alt="Photonic qubit">
+                </div>
+                <div class="subheading">
+                    <h3>3. Neutral-Atom Qubit</h3>
+                    <p>Neutral-atom quantum computing utilizes Rydberg atoms—highly excited neutral atoms with exaggerated atomic properties. These atoms serve as qubits. This method leverages the strong interactions between Rydberg atoms to perform quantum operations, making it a promising approach for scalable quantum computing. Compared to superconducting qubits, neutral-atom systems potentially offer longer coherence times and lower error rates. Unlike photonic qubits, which operate effectively at room temperature and are ideal for quantum communication, neutral-atom qubits excel in quantum simulation and computation through their robust interaction capabilities.</p>
+                    <img src="../webimages/neutral-atom-qubit.jpeg" alt="neutral atom qubit">
+                </div>
+                <div class="subheading">
+                    <h3>4. Trapped Ion Qubit</h3>
+                    <p>Trapped ion quantum computing utilizes ions—atoms with an electrical charge—confined in electromagnetic fields. These charged atoms are used as qubits and manipulated with lasers to perform quantum operations. The precision of laser interactions allows for high-fidelity quantum gates, which are crucial for reducing computational errors. Trapped ion systems are known for their long coherence times, enabling sustained quantum information processing. Compared to superconducting and photonic qubits, trapped ions provide extremely stable qubits with the ability to interact at long distances, making them highly suitable for scalable quantum computing and precise quantum simulations</p>
+                    <img src="../webimages/traped-ion-qubit.jpg" alt="Trapped ion qubit">
+                </div>
+                <div class="subheading">
+                    <h3>5. Quantum dot Qubit</h3>
+                    <p>Quantum dot quantum computing uses tiny semiconductor nanoparticles, known as quantum dots, to confine electrons or holes in three-dimensional space, functioning as qubits. By manipulating the quantum state of these confined charges through external electric or magnetic fields, quantum dots facilitate quantum operations. This approach benefits from the well-established semiconductor manufacturing techniques, allowing easier integration with existing technology. Compared to other quantum systems like trapped ions and superconducting qubits, quantum dot qubits potentially offer scalable solutions with the promise of operating at higher temperatures, thus reducing the need for extreme cooling infrastructure.</p>
+                    <img src="../webimages/quantum-dot-qubit.jpeg" alt="quantum dot qubit">
+                </div>
+                <div class="subheading">
+                    <h3>6. NV diamond Qubit</h3>
+                    <p>NV diamond quantum computing utilizes nitrogen-vacancy (NV) centers in diamond, where a nitrogen atom replaces a carbon atom adjacent to a vacancy in the diamond lattice. These defects act as stable qubits that can be controlled and read out using optical and microwave techniques. The robustness of diamonds provides exceptional protection against environmental noise, allowing for long coherence times. Compared to other quantum systems, NV diamond qubits excel in operating at room temperature and maintaining high fidelity over extended periods, making them particularly useful for quantum sensing and quantum information processing applications that require stability and precision.</p>
+                    <img src="../webimages/nv-diamond-qubit.jpeg" alt="nv diamond qubit">
+                </div>
+                <div class="subheading">
+                    <h3>7. Topological Qubit</h3>
+                    <p>The qubit is composed of a group of anyons, which do not appear in 3D systems.
+                    It employs quasiparticles in two-dimensional systems, called anyons, whose world pass around one another to form braids in a three-dimensional spacetime. These anyons are not defined by individual properties but by their spatial relationships, forming topological qubits. The global nature of their quantum information storage makes them inherently resistant to local disturbances, dramatically reducing error correction needs. This robust error resistance offers significant advantages in building stable, practical quantum computers.</p>
+                    <img src="../webimages/topological-qubit.jpeg" alt="topological qubit">
+                </div>
+                <div class="subheading">
+                  <h3>7. summary</h3>
+                  <p>
+                    The diversity of qubit models in quantum computing stems from the varying strengths and challenges each type presents. Different models, like superconducting qubits, photonic qubits, and topological qubits, leverage distinct physical phenomena to process quantum information, offering unique advantages in coherence times, error rates, and operating conditions. This variety allows researchers to explore multiple pathways for overcoming the technological hurdles of quantum computing, such as error correction and scalability. Ultimately, the choice of qubit model depends on the specific requirements and goals of the quantum system being developed, pushing the boundaries of innovation in multiple directions simultaneously.</div>
+                <div class="Author">
+                    <p>Article:
+                    <a href="Abdul-Fatah-Jamro.html"> Abdul Fatah Jamro</a></p>
+                </div>
+              </section>
+        </main>
         <footer>
           <div class="footer-links">
               <div class="contact-container">

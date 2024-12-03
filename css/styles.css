@@ -167,12 +167,7 @@ nav a:hover {
 }
 
 /* Responsive iframe styles */
-iframe {
-  width: 100%; /* Set width to 100% for full width on all devices */
-  aspect-ratio: 16/9; /* Maintain aspect ratio of 16:9 */
-  border: none; /* Remove border */
-  max-height: 728px; /* Limit the height to 600px */
-}
+
 
 /* Content Sections */
 .qubit-models, .featured-content, .activity, .event1, .about-quantum-homepage, .founder-section, /* home page */
@@ -565,11 +560,6 @@ footer p {
     background-size: cover; /* Adjust background size */
   }
 
-  iframe {
-    width: 100%; /* Adjust width as needed */
-    height: 500px; /* Adjust height as needed */
-    border: none; /* Remove border */
-  }
   .activity, .event1, .featured-content,.featured-blogs /* Add other classes as needed */ {
     width: 100%; /* Full width */
     flex-direction: column; /* Stack items vertically */

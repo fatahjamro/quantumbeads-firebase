@@ -1,3 +1,19 @@
+// Hamburger menu toggle
+const hamburger = document.getElementById('hamburger');
+const navUl = document.querySelector('nav ul');
+if (hamburger && navUl) {
+    hamburger.addEventListener('click', function() {
+        navUl.classList.toggle('open');
+        hamburger.textContent = navUl.classList.contains('open') ? '✕' : '☰';
+    });
+    navUl.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navUl.classList.remove('open');
+            hamburger.textContent = '☰';
+        });
+    });
+}
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

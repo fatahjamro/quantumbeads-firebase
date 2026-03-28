@@ -1,101 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Quantum computing articles</title>
-        <link rel="stylesheet" href="../css/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <div class="top-nav" id="topNav">
-                <h1>QuantumBeads</h1>
-                <nav>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../html/about.html">About</a></li>
-                        <li><a href="./blogs.html">Blogs</a></li>
-                        <li><a href="../events/events.html">Events</a></li>
-                        <!--li><a href="../qedu/qedu.html">Learn</a></li>-->
-                    </ul>
-                </nav>
-            </div>
-            <div class="hero-image">
-                <img src="../webimages/quantumbeads.png" alt="Quantum Computing Imagery">
-            </div>
-        </header>
-        <main>
-          <section class="featured-blogs">
-            <h2>Featured Bolgs</h2>
-            <p> Interesting blogs on quantum technologies</p>
-        </section>
-        <section class="blog-qubit-types">
-          <div class="Author">
-            <p>Article:
-            <a href="fatah-jamro.html"> Abdul Fatah Jamro</a></p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuantumBeads Insights - Articles on quantum computing, qubits, quantum algorithms, and quantum technologies.">
+    <title>Insights - QuantumBeads | Quantum Computing Articles</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" href="../webimages/qb-favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">QuantumBeads</a>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="./blogs.html">Insights</a></li>
+                <li><a href="../events/events.html">Events</a></li>
+                <li><a href="../html/about.html">About</a></li>
+            </ul>
         </div>
-            <h2>Practical Realization of Qubit</h2>
-            <p>Quantum bit or Qubit is the basic unit of quantum information. Qubits, the essential building blocks of quantum information, appear in several forms across existing quantum computing technologies. As of 2024, the field lacks a standardized method for constructing quantum computers, leading to a range of experimental approaches to developing qubit as a unit of quantum information.</p>
-              <img src="../webimages/qubit.jpeg" alt="Qubit">
-            <p>Each technology is better in their own right, each has strengths and weaknesses. The most common types of qubits are mentioned here:</p>          
-                <div class="subheading">
-                    <h3>1. Superconducting Qubit</h3>
-                    <p>Superconducting qubit is a key player in solid-state quantum computing, it harnesses superconducting electronic circuits. These circuits enable quantum computing by exploiting the unique properties of superconductors to process quantum information efficiently under very low temperature (~4 milli kelvin).</p>
-                    <img src="../webimages/superconductiong-qubit.jpeg" alt="Superconducting qubit">
-                </div>
-                <div class="subheading">
-                    <h3>2. Photonic Qubit</h3>
-                    <p>Photonic Quantum Computing (PQC) employs individual photons, or particles of light, as qubits to manipulate and process quantum information. This approach leverages the intrinsic properties of light to perform quantum computations. photonic quantum computing can be performed at room temperature. This is one of the significant advantages of using photons as qubits, as they do not require the extreme cooling that other types of quantum systems, like superconducting qubits, typically need</p>
-                    <img src="../webimages/photonic-qubit.jpeg" alt="Photonic qubit">
-                </div>
-                <div class="subheading">
-                    <h3>3. Neutral-Atom Qubit</h3>
-                    <p>Neutral-atom quantum computing utilizes Rydberg atoms—highly excited neutral atoms with exaggerated atomic properties. These atoms serve as qubits. This method leverages the strong interactions between Rydberg atoms to perform quantum operations, making it a promising approach for scalable quantum computing. Compared to superconducting qubits, neutral-atom systems potentially offer longer coherence times and lower error rates. Unlike photonic qubits, which operate effectively at room temperature and are ideal for quantum communication, neutral-atom qubits excel in quantum simulation and computation through their robust interaction capabilities.</p>
-                    <img src="../webimages/neutral-atom-qubit.jpeg" alt="neutral atom qubit">
-                </div>
-                <div class="subheading">
-                    <h3>4. Trapped Ion Qubit</h3>
-                    <p>Trapped ion quantum computing utilizes ions—atoms with an electrical charge—confined in electromagnetic fields. These charged atoms are used as qubits and manipulated with lasers to perform quantum operations. The precision of laser interactions allows for high-fidelity quantum gates, which are crucial for reducing computational errors. Trapped ion systems are known for their long coherence times, enabling sustained quantum information processing. Compared to superconducting and photonic qubits, trapped ions provide extremely stable qubits with the ability to interact at long distances, making them highly suitable for scalable quantum computing and precise quantum simulations</p>
-                    <img src="../webimages/traped-ion-qubit.jpg" alt="Trapped ion qubit">
-                </div>
-                <div class="subheading">
-                    <h3>5. Quantum dot Qubit</h3>
-                    <p>Quantum dot quantum computing uses tiny semiconductor nanoparticles, known as quantum dots, to confine electrons or holes in three-dimensional space, functioning as qubits. By manipulating the quantum state of these confined charges through external electric or magnetic fields, quantum dots facilitate quantum operations. This approach benefits from the well-established semiconductor manufacturing techniques, allowing easier integration with existing technology. Compared to other quantum systems like trapped ions and superconducting qubits, quantum dot qubits potentially offer scalable solutions with the promise of operating at higher temperatures, thus reducing the need for extreme cooling infrastructure.</p>
-                    <img src="../webimages/quantum-dot-qubit.jpeg" alt="quantum dot qubit">
-                </div>
-                <div class="subheading">
-                    <h3>6. NV diamond Qubit</h3>
-                    <p>NV diamond quantum computing utilizes nitrogen-vacancy (NV) centers in diamond, where a nitrogen atom replaces a carbon atom adjacent to a vacancy in the diamond lattice. These defects act as stable qubits that can be controlled and read out using optical and microwave techniques. The robustness of diamonds provides exceptional protection against environmental noise, allowing for long coherence times. Compared to other quantum systems, NV diamond qubits excel in operating at room temperature and maintaining high fidelity over extended periods, making them particularly useful for quantum sensing and quantum information processing applications that require stability and precision.</p>
-                    <img src="../webimages/nv-diamond-qubit.jpeg" alt="nv diamond qubit">
-                </div>
-                <div class="subheading">
-                    <h3>7. Topological Qubit</h3>
-                    <p>The qubit is composed of a group of anyons, which do not appear in 3D systems.
-                    It employs quasiparticles in two-dimensional systems, called anyons, whose world pass around one another to form braids in a three-dimensional spacetime. These anyons are not defined by individual properties but by their spatial relationships, forming topological qubits. The global nature of their quantum information storage makes them inherently resistant to local disturbances, dramatically reducing error correction needs. This robust error resistance offers significant advantages in building stable, practical quantum computers.</p>
-                    <img src="../webimages/topological-qubit.jpeg" alt="topological qubit">
-                </div>
-                <div class="subheading">
-                  <h3>7. Summary</h3>
-                  <p>
-                    The diversity of qubit models in quantum computing stems from the varying strengths and challenges each type presents. Different models, like superconducting qubits, photonic qubits, and topological qubits, leverage distinct physical phenomena to process quantum information, offering unique advantages in coherence times, error rates, and operating conditions. This variety allows researchers to explore multiple pathways for overcoming the technological hurdles of quantum computing, such as error correction and scalability. Ultimately, the choice of qubit model depends on the specific requirements and goals of the quantum system being developed, pushing the boundaries of innovation in multiple directions simultaneously.</div>
-                <div class="Author">
-                    <p>Article:
-                    <a href="fatah-jamro.html"> Abdul Fatah Jamro</a></p>
-                </div>
-              </section>
-        </main>
-        <footer>
-          <div class="footer-links">
-              <div class="contact-container">
-                <p>Reach us:</p>
-                <ul>
-                  <li><a href="https://www.linkedin.com/company/QuantumBeads"><img class="social-icon" src="../webimages/LinkedInlogo.png" alt="LinkedIn"></a></li>
-                </ul>
-              </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="about-page-hero" style="position: relative;">
+        <div class="hero-content">
+            <h1>Insights</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 1rem;">Exploring quantum technologies, algorithms, and practical applications</p>
+            <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--accent-blue); letter-spacing: 0.05em;">8 articles below ↓</p>
+        </div>
+        <div style="position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); animation: bounce 2s infinite;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </section>
+    <style>
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(6px); }
+        }
+    </style>
+
+    <!-- Main Content -->
+    <main class="blogs-page">
+        <!-- Blog Post: Practical Realization of Qubit -->
+        <article class="blog-post">
+            <div class="blog-author">
+                <p>Article by <a href="../fatah-jamro.html">Fatah Jamro</a> | QuantumBeads</p>
             </div>
-          <p>&copy; 2023 QuantumBeads</p>
-      </footer>
-      <script src="js/script.js"></script>
-  </body>
+
+            <h2>Practical Realization of Qubit</h2>
+            <p style="color: var(--text-secondary); font-style: italic; margin: 1rem 0;">Understanding the building blocks of quantum computing: different qubit implementations and their characteristics</p>
+
+            <h3>Introduction</h3>
+            <p>The quantum bit, or qubit, is the fundamental unit of quantum information and the cornerstone of quantum computing technology. Unlike classical bits that exist in a state of either 0 or 1, qubits leverage quantum mechanical properties to exist in superposition—simultaneously representing 0, 1, or both.</p>
+            <p style="margin-top: 1rem;">As of 2024, the quantum computing field lacks a standardized method for constructing quantum computers, leading to a diverse range of experimental approaches to developing qubits as the unit of quantum information. Each technology brings unique strengths and challenges, making it crucial for researchers and practitioners to understand the practical implementations available.</p>
+
+            <img src="../webimages/qubit.jpeg" alt="Quantum Bit Representations" loading="lazy">
+
+            <h3>Why Multiple Qubit Technologies?</h3>
+            <p>Each qubit technology is optimized for different characteristics—coherence time, gate fidelity, scalability, operating temperature, and cost. Some excel at room temperature operation, while others require extreme cooling. Some achieve high fidelity gates, while others prioritize scalability. Understanding these trade-offs is essential for selecting the right technology for specific applications.</p>
+
+            <!-- Superconducting Qubit -->
+            <h3>1. Superconducting Qubit</h3>
+            <p>Superconducting qubits are a key player in solid-state quantum computing, harnessing superconducting electronic circuits to exploit unique quantum properties. These circuits enable quantum computing by processing quantum information efficiently at extremely low temperatures (approximately 4 millikelvin, or mK).</p>
+            <img src="../webimages/superconductiong-qubit.jpeg" alt="Superconducting Qubit" loading="lazy">
+            <p style="margin-top: 1rem;"><strong style="color: var(--accent-blue);">Key Characteristics:</strong></p>
+            <ul style="margin-left: 2rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                <li style="margin: 0.5rem 0;">High gate fidelity and fast operation</li>
+                <li style="margin: 0.5rem 0;">Requires dilution refrigerators for operation</li>
+                <li style="margin: 0.5rem 0;">Relatively short coherence times (microseconds to milliseconds)</li>
+                <li style="margin: 0.5rem 0;">Mature technology with established manufacturing</li>
+                <li style="margin: 0.5rem 0;">Used by IBM, Google, and other major quantum companies</li>
+            </ul>
+
+            <!-- Photonic Qubit -->
+            <h3>2. Photonic Qubit</h3>
+            <p>Photonic Quantum Computing (PQC) employs individual photons, or particles of light, as qubits to manipulate and process quantum information. This approach leverages the intrinsic properties of light to perform quantum computations, with the significant advantage of operating at room temperature.</p>
+            <img src="../webimages/photonic-qubit.jpeg" alt="Photonic Qubit" loading="lazy">
+            <p style="margin-top: 1rem;"><strong style="color: var(--accent-blue);">Key Characteristics:</strong></p>
+            <ul style="margin-left: 2rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                <li style="margin: 0.5rem 0;">Room temperature operation eliminates cooling requirements</li>
+                <li style="margin: 0.5rem 0;">Excellent for quantum communication and networking</li>
+                <li style="margin: 0.5rem 0;">Lower error rates in certain operations</li>
+                <li style="margin: 0.5rem 0;">Challenges with photon generation and detection efficiency</li>
+                <li style="margin: 0.5rem 0;">More challenging to achieve two-qubit gates</li>
+            </ul>
+
+            <!-- Neutral-Atom Qubit -->
+            <h3>3. Neutral-Atom Qubit</h3>
+            <p>Neutral-atom quantum computing utilizes Rydberg atoms—highly excited neutral atoms with exaggerated atomic properties—serving as qubits. This method leverages strong interactions between Rydberg atoms to perform quantum operations, making it a promising approach for scalable quantum computing.</p>
+            <img src="../webimages/neutral-atom-qubit.jpeg" alt="Neutral-Atom Qubit" loading="lazy">
+            <p style="margin-top: 1rem;"><strong style="color: var(--accent-blue);">Key Characteristics:</strong></p>
+            <ul style="margin-left: 2rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                <li style="margin: 0.5rem 0;">Potentially longer coherence times than superconducting qubits</li>
+                <li style="margin: 0.5rem 0;">Lower error rates in quantum operations</li>
+                <li style="margin: 0.5rem 0;">Highly scalable architecture</li>
+                <li style="margin: 0.5rem 0;">Excellent for quantum simulation and computation</li>
+                <li style="margin: 0.5rem 0;">Emerging technology with growing industry interest</li>
+            </ul>
+
+            <!-- Trapped Ion Qubit -->
+            <h3>4. Trapped Ion Qubit</h3>
+            <p>Trapped ion quantum computing utilizes ions—atoms with electrical charge—confined in electromagnetic fields. These charged atoms are manipulated with lasers to perform quantum operations, achieving high-fidelity quantum gates through precise laser interactions.</p>
+            <img src="../webimages/traped-ion-qubit.jpg" alt="Trapped Ion Qubit" loading="lazy">
+            <p style="margin-top: 1rem;"><strong style="color: var(--accent-blue);">Key Characteristics:</strong></p>
+            <ul style="margin-left: 2rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                <li style="margin: 0.5rem 0;">Extremely high gate fidelity (99%+)</li>
+                <li style="margin: 0.5rem 0;">Long coherence times (seconds or longer)</li>
+                <li style="margin: 0.5rem 0;">Can interact at long distances</li>
+                <li style="margin: 0.5rem 0;">Ideal for precise quantum simulations</li>
+                <li style="margin: 0.5rem 0;">Highly suitable for scalable quantum computing</li>
+            </ul>
+
+            <!-- Quantum Dot Qubit -->
+            <h3>5. Quantum Dot Qubit</h3>
+            <p>Quantum dot quantum computing uses tiny semiconductor nanoparticles, known as quantum dots, to confine electrons or holes in three-dimensional space, functioning as qubits. External electric or magnetic fields manipulate the quantum state of these confined charges to facilitate quantum operations.</p>
+            <img src="../webimages/quantum-dot-qubit.jpeg" alt="Quantum Dot Qubit" loading="lazy">
+            <p style="margin-top: 1rem;"><strong style="color: var(--accent-blue);">Key Characteristics:</strong></p>
+            <ul style="margin-left: 2rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                <li style="margin: 0.5rem 0;">Compatible with existing semiconductor manufacturing</li>
+                <li style="margin: 0.5rem 0;">Potential for operation at higher temperatures</li>
+                <li style="margin: 0.5rem 0;">Scalable solutions possible</li>
+                <li style="margin: 0.5rem 0;">Reduced cooling infrastructure requirements</li>
+                <li style="margin: 0.5rem 0;">Still in early development stages</li>
+            </ul>
+
+            <!-- NV Diamond Qubit -->
+            <h3>6. NV Diamond Qubit</h3>
+            <p>NV diamond quantum computing utilizes nitrogen-vacancy (NV) centers in diamond, where a nitrogen atom replaces a carbon atom adjacent to a vacancy in the diamond lattice. These defects act as stable qubits controlled and read out using optical and microwave techniques.</p>
+            <img src="../webimages/nv-diamond-qubit.jpeg" alt="NV Diamond Qubit" loading="lazy">
+            <p style="margin-top: 1rem;"><strong style="color: var(--accent-blue);">Key Characteristics:</strong></p>
+            <ul style="margin-left: 2rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                <li style="margin: 0.5rem 0;">Room temperature operation</li>
+                <li style="margin: 0.5rem 0;">Excellent environmental noise protection</li>
+                <li style="margin: 0.5rem 0;">Long coherence times at room temperature</li>
+                <li style="margin: 0.5rem 0;">Ideal for quantum sensing applications</li>
+                <li style="margin: 0.5rem 0;">High fidelity and stability</li>
+            </ul>
+
+            <!-- Topological Qubit -->
+            <h3>7. Topological Qubit</h3>
+            <p>Topological qubits employ quasiparticles in two-dimensional systems, called anyons, whose worldlines braid around one another in three-dimensional spacetime. These anyons are not defined by individual properties but by their spatial relationships, forming topological qubits whose quantum information storage is inherently resistant to local disturbances.</p>
+            <img src="../webimages/topological-qubit.jpeg" alt="Topological Qubit" loading="lazy">
+            <p style="margin-top: 1rem;"><strong style="color: var(--accent-blue);">Key Characteristics:</strong></p>
+            <ul style="margin-left: 2rem; color: var(--text-secondary); margin-top: 0.5rem;">
+                <li style="margin: 0.5rem 0;">Global quantum information storage resists local disturbances</li>
+                <li style="margin: 0.5rem 0;">Dramatically reduced error correction needs</li>
+                <li style="margin: 0.5rem 0;">Theoretically fault-tolerant architecture</li>
+                <li style="margin: 0.5rem 0;">Still largely theoretical with limited experimental demonstrations</li>
+                <li style="margin: 0.5rem 0;">Long-term potential for highly stable quantum computers</li>
+            </ul>
+
+            <!-- Comparative Analysis -->
+            <h3>Comparative Analysis: Choosing the Right Qubit</h3>
+            <div style="overflow-x: auto; margin: 1.5rem 0;">
+                <table style="width: 100%; border-collapse: collapse; color: var(--text-secondary);">
+                    <tr style="background: rgba(0, 212, 255, 0.1); border-bottom: 1px solid var(--border-color);">
+                        <th style="padding: 1rem; text-align: left; color: var(--accent-blue); font-weight: 700;">Technology</th>
+                        <th style="padding: 1rem; text-align: left; color: var(--accent-blue); font-weight: 700;">Temperature</th>
+                        <th style="padding: 1rem; text-align: left; color: var(--accent-blue); font-weight: 700;">Gate Fidelity</th>
+                        <th style="padding: 1rem; text-align: left; color: var(--accent-blue); font-weight: 700;">Coherence Time</th>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <td style="padding: 1rem;">Superconducting</td>
+                        <td style="padding: 1rem;">~4 mK</td>
+                        <td style="padding: 1rem;">~99%</td>
+                        <td style="padding: 1rem;">μs - ms</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color); background: rgba(124, 58, 237, 0.05);">
+                        <td style="padding: 1rem;">Photonic</td>
+                        <td style="padding: 1rem;">Room temp</td>
+                        <td style="padding: 1rem;">~95%</td>
+                        <td style="padding: 1rem;">Long</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <td style="padding: 1rem;">Trapped Ion</td>
+                        <td style="padding: 1rem;">Room temp</td>
+                        <td style="padding: 1rem;">99.9%+</td>
+                        <td style="padding: 1rem;">Seconds+</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color); background: rgba(124, 58, 237, 0.05);">
+                        <td style="padding: 1rem;">Neutral-Atom</td>
+                        <td style="padding: 1rem;">mK</td>
+                        <td style="padding: 1rem;">~99%</td>
+                        <td style="padding: 1rem;">Seconds</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                        <td style="padding: 1rem;">NV Diamond</td>
+                        <td style="padding: 1rem;">Room temp</td>
+                        <td style="padding: 1rem;">~97%</td>
+                        <td style="padding: 1rem;">Milliseconds</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Summary -->
+            <h3>Summary and Conclusions</h3>
+            <p>The diversity of qubit models in quantum computing stems from the varying strengths and challenges each type presents. Different models—superconducting qubits, photonic qubits, trapped ions, neutral atoms, quantum dots, NV centers, and topological qubits—leverage distinct physical phenomena to process quantum information, offering unique advantages in coherence times, error rates, and operating conditions.</p>
+            <p style="margin-top: 1rem;">This variety allows researchers to explore multiple pathways for overcoming technological hurdles such as error correction and scalability. The choice of qubit model ultimately depends on specific requirements and goals:</p>
+            <ul style="margin-left: 2rem; margin-top: 1rem; color: var(--text-secondary);">
+                <li style="margin: 0.5rem 0;"><strong style="color: var(--accent-blue);">For near-term applications:</strong> Superconducting or trapped ion qubits offer mature, proven technologies</li>
+                <li style="margin: 0.5rem 0;"><strong style="color: var(--accent-blue);">For communication networks:</strong> Photonic qubits excel with room-temperature operation and distribution capability</li>
+                <li style="margin: 0.5rem 0;"><strong style="color: var(--accent-blue);">For quantum sensing:</strong> NV diamond qubits provide stability and precision at room temperature</li>
+                <li style="margin: 0.5rem 0;"><strong style="color: var(--accent-blue);">For long-term scaling:</strong> Neutral-atom and topological approaches show tremendous promise</li>
+            </ul>
+            <p style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color); color: var(--text-secondary);">The quantum computing field's diversity of approaches reflects the immaturity and exciting potential of the technology. No single approach has emerged as universally superior, and the most successful quantum computing future likely involves multiple complementary technologies serving different purposes.</p>
+
+            <div class="blog-author" style="margin-top: 2rem;">
+                <p>Article by <a href="../fatah-jamro.html">Fatah Jamro</a> | QuantumBeads</p>
+            </div>
+        </article>
+
+        <!-- Featured Research Section -->
+        <section class="about-section">
+            <h3>Our Featured Research</h3>
+            <p>Explore our latest publication on Quantum Latin Squares and their applications in quantum error correction and hardware verification.</p>
+            <a href="../fatah-jamro.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">View Publications</a>
+        </section>
+
+        <!-- Newsletter signup at end of article -->
+        <!-- SETUP: Replace "quantumbeads" with your Buttondown username after signing up at buttondown.email -->
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h2>The Quantum Digest</h2>
+                <p>Enjoyed this article? Get fortnightly insights on quantum computing delivered to your inbox — clear, honest, no hype.</p>
+                <form
+                    action="https://buttondown.email/api/emails/embed-subscribe/quantumbeads"
+                    method="post"
+                    target="popupwindow"
+                    onsubmit="window.open('https://buttondown.email/quantumbeads', 'popupwindow')"
+                    class="newsletter-form">
+                    <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+                <p class="newsletter-note">Fortnightly. Free. Unsubscribe anytime.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="../html/about.html">About Us</a></li>
+                        <li><a href="../fatah-jamro.html">Our Team</a></li>
+                        <li><a href="./blogs.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="./blogs.html">Insights</a></li>
+                        <li><a href="../events/events.html">Events</a></li>
+                        <li><a href="../fatah-jamro.html">Publications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/company/QuantumBeads" target="_blank">LinkedIn</a></li>
+                        <li><a href="mailto:contact@quantumbeads.com">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2026 QuantumBeads. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Quantum Computing Consultancy & Research | Galway, Ireland</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
 </html>

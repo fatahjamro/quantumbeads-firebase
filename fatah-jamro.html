@@ -1,99 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Abdul Fatah Jamro</title>
-        <link rel="stylesheet" href="css/styles.css">    
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fatah Jamro - Founder of QuantumBeads, PhD in Quantum Computing, researcher in Quantum Latin Squares.">
+    <title>Fatah Jamro | Quantum Computing Researcher</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="webimages/qb-favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">QuantumBeads</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="blogs/blogs.html">Insights</a></li>
+                <li><a href="events/events.html">Events</a></li>
+                <li><a href="html/about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <header>
-            <div class="top-nav" id="topNav">
-                <h1>QuantumBeads</h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="hero-image">
-                <img src="webimages/fatah-jamro.jpeg" alt="Abdul Fatah Jamro">
-            </div>
-        </header>
+    <!-- Page Hero -->
+    <section class="about-page-hero">
+        <div class="hero-content">
+            <h1>Fatah Jamro</h1>
+            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 1rem;">Founder, QuantumBeads | Quantum Computing Researcher</p>
+        </div>
+    </section>
 
-        <main>
-        <section class="abdul-fatah">
-                <h1>Abdul Fatah Jamro</h1>
+    <!-- Main Content -->
+    <main class="team-page">
+        <!-- Team Member Card -->
+        <section class="team-member">
+            <img src="webimages/fatah.png" alt="Fatah Jamro" class="team-member-image">
+            <h3 class="founder-name">Fatah Jamro</h3>
+            <div class="team-member-title">Founder & Quantum Researcher, QuantumBeads</div>
+            <p style="color: var(--text-secondary); line-height: 1.8;">
+                PhD Candidate in Quantum Computing | Atlantic Technological University Galway, Ireland<br>
+                Research: Quantum Latin Squares and their applications in quantum information theory<br>
+                Background: B.E. and M.E. in Electronics Engineering
+            </p>
+            <div class="social-links" style="margin-top: 1.5rem;">
+                <a href="https://www.linkedin.com/in/fatahjamro/" target="_blank" title="LinkedIn Profile">
+                    <img src="webimages/LinkedInlogo.png" alt="LinkedIn">
+                </a>
+            </div>
         </section>
-            <section class="about-me">
-                <h3>About Me</h3>
-                <p>
-                    Hello! I'm Abdul Fatah, the founder of QuantumBeads.
-                    <span id="toggle-about-me" class="toggle-abstract">more...</span>
-                </p>
-                <div id="about-me-content" class="abstract">
-                <p> I am a passionate researcher and PhD student in quantum computing algorithms and error-correcting codes.
-                    I believe Quantum computing technologies are approaching faster than we expect.
-                    I am a young professional having 5+ years of experience in electrical and electronics field. I have Bachelor and Master of Engineering degrees in electronics engineering. 
-                    I enjoy quantum information science and technology research at its roots. QuantumBeads is an initiative during my PhD to spread awareness of quantum computing technologies 
-                    and collaborate for advancing quantum computing research and development.</p>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <h3>About Fatah</h3>
+            <p>Fatah Jamro is a quantum computing researcher and the founder of QuantumBeads. With a background in electronics engineering and current PhD research at Atlantic Technological University Galway, he combines theoretical depth with practical engineering experience.</p>
+            <p style="margin-top: 1rem;">With 5+ years of experience in electrical and electronics fields, Fatah brings a grounded perspective to quantum computing — understanding both the hardware realities and the algorithmic possibilities. His PhD research explores how Quantum Latin Squares can be applied to problems in hardware benchmarking, error correction, and cryptography.</p>
+        </section>
+
+        <!-- Professional Background -->
+        <section class="about-section">
+            <h3>Professional Background</h3>
+            <div style="margin-top: 1.5rem;">
+                <h4 style="color: var(--accent-blue); margin-bottom: 1rem; font-weight: 700;">Education</h4>
+                <div style="padding: 1rem; background: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--accent-blue); border-radius: 6px; margin-bottom: 1.5rem;">
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0;"><strong style="color: var(--text-primary);">PhD in Quantum Computing</strong><br>Atlantic Technological University (ATU) Galway, Ireland<br>Current (2022 - present)</p>
                 </div>
-                </section>
-            <section class="Publications">   
-                <h2>Publications</h2> 
-                <h3>An Overview of Quantum Latins Squares in Quantum Information Theory</h3>
-                <p>Abdul Fatah and Ian McLoughlin and Saim Ghafoor and Iulia Anton, </p>
-                <p>Atlantic Technological University Galway Ireland</p>
-                <p> 2024 International Conference on Quantum Communications, Networking, and Computing (QCNC), Kanazawa, Japan, 2024, pp. 57-64,
-                    doi: 10.1109/QCNC62729.2024.00018.</p>
-                <p>
-                    <span id="toggle-abstract" class="toggle-abstract">Abstract</span>
-                </p>
-            <div id="abstract" class="abstract">
-                <p>
-                    Abstract: Quantum Latin Squares have emerged as mathematical structures of interest in quantum information theory. This paper provides a comprehensive overview of quantum Latin squares. We aim to synthesize the current knowledge for the benefit of researchers in quantum information theory. We begin by establishing the theoretical foundation linking classical Latin squares with their quantum counterparts. This provides insight into their potential applications, particularly in the realm of quantum error correction. Through a detailed examination, we outline known constructions and elucidate the properties of quantum Latin squares, highlighting their role within quantum computing frameworks. We then explore the relationships of quantum Latin squares with mutually unbiased bases and unitary error bases. This underscores their importance in the construction of quantum error correcting codes using mutually orthogonal quantum Latin squares. We give significant focus to a comparative analysis between classical and quantum Latin squares, particularly in their applications to error correcting codes. The applications are analogous to the application of classical Latin squares to classical error correcting codes. This overview aims to not only compile existing research but also to inspire further exploration into Quantum Latin squares and their applications in quantum information theory.
-                </p>
+                <div style="padding: 1rem; background: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--accent-blue); border-radius: 6px; margin-bottom: 1.5rem;">
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0;"><strong style="color: var(--text-primary);">Master of Engineering (M.E.)</strong><br>Electronics Engineering<br>2020 - 2022</p>
+                </div>
+                <div style="padding: 1rem; background: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--accent-blue); border-radius: 6px; margin-bottom: 1.5rem;">
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0;"><strong style="color: var(--text-primary);">Bachelor of Engineering (B.E.)</strong><br>Electronics Engineering<br>2013 - 2017</p>
+                </div>
+
+                <h4 style="color: var(--accent-purple); margin-top: 2rem; margin-bottom: 1rem; font-weight: 700;">Professional Experience</h4>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">5+ years of experience in electrical and electronics engineering fields, working on both hardware design and embedded systems projects. This industrial background provides practical insights into quantum hardware implementation challenges.</p>
+
+                <h4 style="color: var(--accent-pink); margin-top: 2rem; margin-bottom: 1rem; font-weight: 700;">Founder</h4>
+                <div style="padding: 1rem; background: rgba(255, 0, 153, 0.05); border-left: 3px solid var(--accent-pink); border-radius: 6px;">
+                    <p style="color: var(--text-secondary); margin: 0.5rem 0;"><strong style="color: var(--text-primary);">QuantumBeads</strong><br>Founded during PhD studies to help organisations understand and adopt quantum computing through consulting, workshops, and applied research.</p>
+                </div>
             </div>
-            </section>
-           
-            <section class="resume">
-                <h2>Resume</h2>
-                <p>My resume for detailed profile</p>
+        </section>
 
-                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRCrDo8gErzOjNpyfLSFr7nQW6vmBKaS2DX7zWFme8AMVB8dmEqC3XSsKwiAoxW08gRK15-jdsx1UVk/embed?start=false&loop=false&delayms=60000" frameborder="0" width="794" height="1151" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                
-            </section>
-           <!-- 
-            <section class="Awards and Achievements"> 
-                <h2>Awards and Achievements </h2>  
-                <p> TBA</p>
-            </section> 
+        <!-- Research Focus -->
+        <section class="about-section">
+            <h3>Research Focus</h3>
+            <p><strong style="color: var(--accent-blue);">Quantum Latin Squares:</strong> Fatah's PhD research centres on Quantum Latin Squares and their applications in quantum information theory. He is exploring how these mathematical structures can be applied to quantum hardware benchmarking, error correction, and cryptography — an active and growing area of investigation.</p>
 
-            <section class="Education">
-                <h2>Education</h2>
-                <p>(Nov 2022 - continue) PhD Quantum Computing at the Atlantic Technological University, Galway Ireland.</p>
-                <p>(2020 -2022) Master of Engineering in Industrial Electronics Engineering.</p>
-                <p>(2013 - 2017) Bachelor of Engineering in Electronics Engineering.</p>
-            </section> -->
-
-        <!--    <section class="Experience">        
-                <h2>Work Experience</h2>
-                <p>I have more than 5 years of work experience in electrical and electronic industry.</p>
-           </section> -->
-
-        </main>
-        <footer>
-            <div class="footer-links">
-                <div class="contact-container">
-                  <p>Reach us:</p>
-                  <ul>
-                    <li><a href="https://www.linkedin.com/company/QuantumBeads"><img class="social-icon" src="webimages/LinkedInlogo.png" alt="LinkedIn"></a></li>
-                  </ul>
+            <h4 style="color: var(--accent-purple); margin-top: 1.5rem; margin-bottom: 1rem; font-weight: 700;">Research Areas</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <div style="padding: 1.5rem; background: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--accent-blue); border-radius: 6px;">
+                    <h4 style="color: var(--accent-blue); margin-bottom: 0.5rem; font-size: 1rem;">Quantum Benchmarking</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Exploring how quantum Latin squares can be used to characterise and verify quantum hardware performance.</p>
                 </div>
-              </div>
-            <p>&copy; 2023 QuantumBeads</p>
-        </footer>
-        <script src="js/script.js"></script>
-    </body>
+                <div style="padding: 1.5rem; background: rgba(124, 58, 237, 0.05); border-left: 3px solid var(--accent-purple); border-radius: 6px;">
+                    <h4 style="color: var(--accent-purple); margin-bottom: 0.5rem; font-size: 1rem;">Error Correction</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Investigating quantum error correcting codes constructed from mutually orthogonal quantum Latin squares.</p>
+                </div>
+                <div style="padding: 1.5rem; background: rgba(255, 0, 153, 0.05); border-left: 3px solid var(--accent-pink); border-radius: 6px;">
+                    <h4 style="color: var(--accent-pink); margin-bottom: 0.5rem; font-size: 1rem;">Quantum Cryptography</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Exploring applications of quantum Latin squares in quantum secure communication protocols.</p>
+                </div>
+                <div style="padding: 1.5rem; background: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--accent-blue); border-radius: 6px;">
+                    <h4 style="color: var(--accent-blue); margin-bottom: 0.5rem; font-size: 1rem;">Quantum Algorithms</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem;">Investigating quantum algorithm implementations and optimization strategies.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section class="about-section">
+            <h3>Publications & Research Contributions</h3>
+
+            <div class="publication-item">
+                <h4>An Overview of Quantum Latin Squares in Quantum Information Theory</h4>
+                <p class="publication-meta"><strong>Authors:</strong> Abdul Fatah, Ian McLoughlin, Saim Ghafoor, Iulia Anton</p>
+                <p class="publication-meta"><strong>Institution:</strong> Atlantic Technological University (ATU) Galway, Ireland</p>
+                <p class="publication-meta"><strong>Conference:</strong> 2024 International Conference on Quantum Communications, Networking, and Computing (QCNC)</p>
+                <p class="publication-meta"><strong>Location:</strong> Kanazawa, Japan, 2024</p>
+                <p class="publication-meta"><strong>Publication:</strong> IEEE Conference Proceedings, pp. 57-64<br>DOI: 10.1109/QCNC62729.2024.00018</p>
+
+                <div style="margin-top: 1rem;">
+                    <span class="toggle-abstract" data-target="abstract-qls" style="color: var(--accent-blue); cursor: pointer; text-decoration: underline; font-weight: 600;">Show Abstract</span>
+                </div>
+
+                <div id="abstract-qls" class="abstract">
+                    <p style="margin-top: 1rem; padding: 1rem; background: rgba(0, 212, 255, 0.05); border-radius: 6px; color: var(--text-secondary);">
+                        <strong style="color: var(--accent-blue);">Abstract:</strong> Quantum Latin Squares have emerged as mathematical structures of interest in quantum information theory. This paper provides a comprehensive overview of quantum Latin squares and their applications. We aim to synthesize current knowledge for the benefit of researchers in quantum information theory.
+                    </p>
+                    <p style="margin-top: 1rem; padding: 1rem; background: rgba(0, 212, 255, 0.05); border-radius: 6px; color: var(--text-secondary);">
+                        We begin by establishing the theoretical foundation linking classical Latin squares with their quantum counterparts, providing insight into their potential applications in quantum error correction. Through detailed examination, we outline known constructions and properties of quantum Latin squares, highlighting their role in quantum computing frameworks. We explore relationships with mutually unbiased bases and unitary error bases, underscoring their importance in constructing quantum error correcting codes.
+                    </p>
+                    <p style="margin-top: 1rem; padding: 1rem; background: rgba(0, 212, 255, 0.05); border-radius: 6px; color: var(--text-secondary);">
+                        This overview compiles existing research while inspiring further exploration into Quantum Latin squares and their applications in quantum information theory, particularly for hardware verification and benchmarking applications analogous to classical error correcting codes.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Expertise -->
+        <section class="about-section">
+            <h3>Technical Expertise</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+                <div style="padding: 1.5rem; background: rgba(26, 26, 62, 0.3); border-radius: 8px;">
+                    <h4 style="color: var(--accent-blue); margin-bottom: 1rem; font-weight: 700; font-size: 0.95rem;">Quantum Computing</h4>
+                    <ul style="color: var(--text-secondary); font-size: 0.9rem;">
+                        <li>Quantum Algorithms</li>
+                        <li>Quantum Error Correction</li>
+                        <li>Quantum Information Theory</li>
+                        <li>Quantum Cryptography</li>
+                        <li>Hardware Benchmarking</li>
+                    </ul>
+                </div>
+                <div style="padding: 1.5rem; background: rgba(26, 26, 62, 0.3); border-radius: 8px;">
+                    <h4 style="color: var(--accent-purple); margin-bottom: 1rem; font-weight: 700; font-size: 0.95rem;">Mathematical Foundations</h4>
+                    <ul style="color: var(--text-secondary); font-size: 0.9rem;">
+                        <li>Linear Algebra</li>
+                        <li>Abstract Algebra</li>
+                        <li>Combinatorics</li>
+                        <li>Latin Squares</li>
+                        <li>Group Theory</li>
+                    </ul>
+                </div>
+                <div style="padding: 1.5rem; background: rgba(26, 26, 62, 0.3); border-radius: 8px;">
+                    <h4 style="color: var(--accent-pink); margin-bottom: 1rem; font-weight: 700; font-size: 0.95rem;">Engineering</h4>
+                    <ul style="color: var(--text-secondary); font-size: 0.9rem;">
+                        <li>Electronics Engineering</li>
+                        <li>Hardware Design</li>
+                        <li>Embedded Systems</li>
+                        <li>Signal Processing</li>
+                        <li>Circuit Analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching & Outreach -->
+        <section class="about-section">
+            <h3>Teaching & Outreach</h3>
+            <p>Beyond research, Fatah is committed to advancing quantum computing education and awareness globally:</p>
+            <ul style="margin-left: 2rem; margin-top: 1rem; color: var(--text-secondary);">
+                <li style="margin: 0.7rem 0;"><strong style="color: var(--accent-blue);">Quantum Computing Winter School 2024:</strong> Organized and led an international winter school at Mehran University of Engineering & Technology, bringing quantum computing education to 200+ students and professionals</li>
+                <li style="margin: 0.7rem 0;"><strong style="color: var(--accent-blue);">QuantumBeads Blog:</strong> Regular articles on quantum computing topics, making complex concepts accessible to students and professionals</li>
+                <li style="margin: 0.7rem 0;"><strong style="color: var(--accent-blue);">Workshop Development:</strong> Designing and conducting hands-on workshops on quantum algorithms, error correction, and hardware verification</li>
+                <li style="margin: 0.7rem 0;"><strong style="color: var(--accent-blue);">Community Building:</strong> Building a global network of quantum computing enthusiasts and researchers</li>
+            </ul>
+        </section>
+
+        <!-- Vision & Future -->
+        <section class="about-section" style="background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));">
+            <h3>Vision for the Future</h3>
+            <p>Fatah envisions a future where quantum computing is accessible, reliable, and transformative. Through QuantumBeads, he is working to:</p>
+            <ul style="margin-left: 2rem; margin-top: 1rem; color: var(--text-secondary);">
+                <li style="margin: 0.7rem 0;">Establish quantum verification and benchmarking as industry standards</li>
+                <li style="margin: 0.7rem 0;">Develop scalable solutions for quantum error correction</li>
+                <li style="margin: 0.7rem 0;">Advance quantum computing education globally</li>
+                <li style="margin: 0.7rem 0;">Foster collaboration between academia and industry</li>
+                <li style="margin: 0.7rem 0;">Make quantum computing more accessible to diverse applications</li>
+            </ul>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="about-section" style="text-align: center;">
+            <h3>Connect</h3>
+            <p style="margin: 1rem 0;">Interested in collaboration, research partnerships, or quantum computing discussions?</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+                <a href="https://www.linkedin.com/in/fatahjamro/" target="_blank" class="btn btn-primary">Connect on LinkedIn</a>
+                <a href="mailto:contact@quantumbeads.com" class="btn btn-secondary">Send Email</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="html/about.html">About Us</a></li>
+                        <li><a href="fatah-jamro.html">Our Team</a></li>
+                        <li><a href="blogs/blogs.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blogs/blogs.html">Insights</a></li>
+                        <li><a href="events/events.html">Events</a></li>
+                        <li><a href="fatah-jamro.html">Publications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/company/QuantumBeads" target="_blank">LinkedIn</a></li>
+                        <li><a href="mailto:contact@quantumbeads.com">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2026 QuantumBeads. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Quantum Computing Consultancy & Research | Galway, Ireland</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
 </html>

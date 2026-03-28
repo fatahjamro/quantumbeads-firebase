@@ -1,115 +1,912 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="QuantumBeads is a quantum computing research and development, education and outreach initiative, synergy of quantum beads.">
-        <title>Quantum Beads | QuantumBeads </title>
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="icon" href="webimages/qb-favicon.ico"> <!-- Add this line -->
-    </head>
-    <body>
-        <div class="box-fatah"><a href="fatah-jamro.html"><h3>Abdul Fatah</h3><p>Profile</p></a></div>
-        <header>
-            <div class="top-nav" id="topNav">
-                <h1>QuantumBeads</h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="html/about.html">About</a></li>
-                        <li><a href="blogs/blogs.html">Blogs</a></li>
-                        <li><a href="events/events.html">Events</a></li>
-                        <!--li><a href="qedu/qedu.html">Learn</a></li>-->
-                    </ul>
-                </nav>
-            </div>
-            <div class="hero-image">
-                <img src="webimages/quantumbeads.png" alt="quantumbeads">
-            </div>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuantumBeads: Quantum Computing Consultancy & Research. We help organisations navigate quantum computing through expert consulting, hands-on workshops, and applied research in quantum information theory.">
+    <meta name="keywords" content="quantum computing, quantum consulting, quantum workshops, quantum training, quantum research, quantum education">
+    <meta name="author" content="Fatah Jamro">
+    <title>QuantumBeads | Quantum Computing Consultancy & Research</title>
+    <link rel="icon" href="webimages/qb-favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<main>
-    <section id="dash-container">
-        <div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>
-        <div class="dash"></div><div class="dash"></div><div class="dash"></div>                        
-    </section>     
-<section class="qubit-models">
-    <div class="Author">
-        <p>Article:
-        <a href="fatah-jamro.html"> Abdul Fatah Jamro</a></p>
-    </div>
-    <h2>Practical Realization of Qubit</h2>
-    <p>There are different models of qubits (quantum bits) in practical that are used in quantum computing technologies. </p>
-    <p><a href="blogs/blogs.html">Read more...</a></p>
-    <!-- <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRNKDWgz0h8Iv593ZCwVS-E8WgUbwWuoF1ul4IPrbvMyPUMXIlDqepAzyxxWtDbCw/embed?start=false&loop=true&delayms=3000" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe> -->
-</section>
+        :root {
+            --dark-bg: #0a0a1a;
+            --dark-bg-secondary: #1a1a3e;
+            --accent-blue: #00d4ff;
+            --accent-purple: #7c3aed;
+            --accent-pink: #ff0099;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0cc;
+            --border-color: #2d2d5f;
+        }
 
-<section class="activity">
-    <h2>Activities</h2>
-    <p>QuantumBeads aims to conduct workshops and trainings around the globe on quantum computing.</p>
-    <div class="event-box">
-        <div class="event1">
-            <div class="event1-text">
-                <a href="events/events.html"> <h3>Quantum Computing Winter School 2024 </h3></a>
-                <p>QuantumBeads has organized it's first international 
-                    winter school on quantum computing technologies at <a href="https://www.muet.edu.pk/">Mehran University of Engineering & Technology Jamshoro</a> on 17 - 18 January 2024 at National Centre for Robotics and Automation: 
-                    Condition Monitoring Systems <a href="https://ncra-cms.muet.edu.pk/" target= "_blank" > NCRA-CMS Labs</a> Pakistan.</p>
-            </div>
-            <a href="https://ncra-cms.muet.edu.pk/"><img src="webimages/ncra-muet-Logo-2.png" alt="ncra lab muet" class="event1-image"></a>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 60px;
+            min-height: 100vh;
+            background: radial-gradient(circle at 20% 50%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--accent-purple), transparent);
+            opacity: 0.1;
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+            top: 10%;
+            left: 10%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--accent-blue), transparent);
+            opacity: 0.1;
+            border-radius: 50%;
+            animation: float 10s ease-in-out infinite reverse;
+            bottom: 10%;
+            right: 10%;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-30px); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            z-index: 10;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .hero-tagline {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 0.85rem 2.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-blue);
+            border: 2px solid var(--accent-blue);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Services Section */
+        .services {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: rgba(26, 26, 62, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* Research Section */
+        .research {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .research-content {
+            background: rgba(26, 26, 62, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .research-highlight {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(124, 58, 237, 0.1));
+            border-left: 4px solid var(--accent-blue);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .research-highlight h4 {
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .publication {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: rgba(124, 58, 237, 0.05);
+            border-left: 3px solid var(--accent-purple);
+        }
+
+        .publication-title {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--accent-blue);
+        }
+
+        .publication-meta {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0.3rem 0;
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-blue);
+            font-weight: 700;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .founder-info {
+            background: rgba(26, 26, 62, 0.5);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .founder-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            border: 3px solid var(--accent-blue);
+            object-fit: cover;
+            display: block;
+        }
+
+        .founder-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .founder-title {
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid var(--accent-blue);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Events Section */
+        .events {
+            max-width: 1200px;
+            margin: 6rem auto;
+            padding: 0 2rem;
+        }
+
+        .event-card {
+            background: rgba(26, 26, 62, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .event-card:hover {
+            border-color: var(--accent-purple);
+            transform: translateX(8px);
+        }
+
+        .event-date {
+            color: var(--accent-purple);
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .event-card p {
+            color: var(--text-secondary);
+        }
+
+        /* Contact Section */
+        .contact {
+            max-width: 800px;
+            margin: 6rem auto;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .contact p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .contact-link {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid var(--accent-blue);
+            border-radius: 6px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .contact-link:hover {
+            background: var(--accent-blue);
+            color: var(--dark-bg);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg-secondary);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 6rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-section h4 {
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-blue);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            color: var(--text-secondary);
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(0, 212, 255, 0.08));
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 5rem 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .newsletter-content {
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .newsletter h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+
+        .newsletter > .newsletter-content > p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.75rem;
+            max-width: 480px;
+            margin: 0 auto 1rem;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 0.85rem 1.25rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .newsletter-input:focus {
+            border-color: var(--accent-blue);
+        }
+
+        .newsletter-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .newsletter-btn {
+            padding: 0.85rem 1.75rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .newsletter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3);
+        }
+
+        .newsletter-note {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            opacity: 0.7;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            nav .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+
+            .hero {
+                margin-top: 80px;
+                min-height: auto;
+                padding: 3rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.3rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">QuantumBeads</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="blogs/blogs.html">Insights</a></li>
+                <li><a href="events/events.html">Events</a></li>
+                <li><a href="html/about.html">About</a></li>
+            </ul>
         </div>
-    </div>
-</section>
+    </nav>
 
-    <section class="featured-content">
-        <h2>Featured Research</h2>
-        <p>Discover the latest breakthroughs in quantum computing algorithms and technologies.</p>
-        <!-- Featured articles will go here -->
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Let's make quantum computing make sense.</h1>
+            <div class="hero-tagline">Consulting. Workshops. Research.</div>
+            <p>Most organisations know quantum computing matters. Few know what to do about it. We help you figure that out — practically, honestly, and without the noise.</p>
+            <div class="cta-buttons">
+                <a href="html/about.html" class="btn btn-primary">Learn More</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
     </section>
 
-  <div class="ad-space">
-        <!-- Advertisement or promotional content goes here -->
-        <p>Ads Space | contact for advertisement</p>
-  </div>       
-        <section class="about-quantum-homepage">
-            <h2><a href="html/about.html">About QuantumBeads</a></h2>
-            <p>Learn more about our mission to advance the field of quantum computing through research and education.</p>
-        </section>
-        <section class="founder-section">
-            <div class="founder-image-container">
-                <img class="founder-image" src="webimages/fatah.png" alt="abdul fatah jamro" width="150" height="150">
-                <a href="https://www.linkedin.com/in/fatahjamro/"><img class="personal-linkedin-icon" src="webimages/LinkedInlogo.png" alt="abdul fatah jamro LinkedIn"></a>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>How We Help</h2>
+            <p>Making quantum computing accessible to organisations and teams</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Quantum Consulting</h3>
+                <p>Not sure where quantum fits in your organisation? We help you assess opportunities, evaluate quantum readiness, and build a practical roadmap for adoption.</p>
             </div>
-            <div>
-                <h2><a href="Abdul-Fatah-Jamro.html"> Abdul Fatah Jamro</a></h2>
-                <p>Founder QuantumBeads</p>
+            <div class="service-card">
+                <div class="service-icon">📚</div>
+                <h3>Workshops & Training</h3>
+                <p>Hands-on workshops tailored for your team's level, from introductory quantum concepts to advanced topics like error correction and algorithm design. We've trained participants across continents.</p>
             </div>
-        </section>
-        </main>
+            <div class="service-card">
+                <div class="service-icon">🔬</div>
+                <h3>Research Partnerships</h3>
+                <p>Collaborate with us on applied quantum research. Our active PhD-level work in quantum information theory opens doors to novel approaches in benchmarking, cryptography, and error correction.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Technical Assessment</h3>
+                <p>Need an independent evaluation of quantum technologies or vendors? We provide clear, research-backed assessments to inform your decisions.</p>
+            </div>
+        </div>
+    </section>
 
-        <footer>
-            <div class="footer-links">
-                <div class="contact-container">
-                  <p>Reach us:</p>
-                    <a href="https://www.linkedin.com/company/QuantumBeads"><img class="social-icon" src="webimages/LinkedInlogo.png" alt="quantum beads LinkedIn"></a>
+    <!-- Research Section -->
+    <section class="research">
+        <div class="section-header">
+            <h2>Research That Informs Our Work</h2>
+            <p>Our consulting and training are grounded in active academic research</p>
+        </div>
+        <div class="research-content">
+            <div class="research-highlight">
+                <h4>Why This Matters</h4>
+                <p>Our founder's PhD research explores advanced mathematical structures in quantum information theory and their applications in hardware benchmarking, quantum cryptography, and error correction. This ongoing work directly informs the consulting and training we provide — giving clients access to expertise at the frontier of quantum computing, not just textbook knowledge.</p>
+            </div>
+
+            <div class="publication">
+                <div class="publication-title">An Overview of Quantum Latin Squares in Quantum Information Theory</div>
+                <div class="publication-meta">Abdul Fatah, Ian McLoughlin, Saim Ghafoor, Iulia Anton</div>
+                <div class="publication-meta">Atlantic Technological University Galway, Ireland</div>
+                <div class="publication-meta">2024 International Conference on Quantum Communications, Networking, and Computing (QCNC), Kanazawa, Japan</div>
+                <div class="publication-meta">IEEE Proceedings, pp. 57-64</div>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">A comprehensive overview synthesising current knowledge on quantum Latin squares, exploring their theoretical foundations, known constructions, and applications in quantum error correction, mutually unbiased bases, and unitary error bases.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="section-header">
+            <h2>About QuantumBeads</h2>
+            <p>Pioneering quantum computing research and education</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Our Mission</h3>
+                <p>QuantumBeads exists to make quantum computing accessible and understandable. We help organisations cut through the hype, understand what quantum can (and can't) do for them, and build real quantum capabilities through training and consulting.</p>
+                <h3>Our Approach</h3>
+                <p>We combine active PhD-level research with practical, jargon-free communication. Whether you're a company exploring quantum for the first time or a team looking to upskill, we meet you where you are.</p>
+                <h3>Where We're Headed</h3>
+                <p>As our PhD research matures, we're working towards developing practical tools for quantum hardware verification and benchmarking. Today, our focus is on helping you build the knowledge foundation to be quantum-ready.</p>
+            </div>
+            <div class="founder-info">
+                <img src="webimages/fatah.png" alt="Fatah Jamro" class="founder-image">
+                <div class="founder-name">Fatah Jamro</div>
+                <div class="founder-title">Founder & Quantum Researcher</div>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">PhD Candidate in Quantum Computing | ATU Galway, Ireland<br>B.E. & M.E. in Electronics Engineering | 5+ years industry experience</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/fatahjamro/" target="_blank" title="LinkedIn">
+                        <img src="webimages/LinkedInlogo.png" alt="LinkedIn">
+                    </a>
                 </div>
-              </div>
-            <p>&copy; 2023 QuantumBeads</p>
-        </footer>
-        <script src="js/script.js"></script>
-    </body>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events">
+        <div class="section-header">
+            <h2>Events & Workshops</h2>
+            <p>Connect with the quantum computing community</p>
+        </div>
+        <div class="event-card">
+            <div class="event-date">January 17-18, 2024</div>
+            <h3>Quantum Computing Winter School 2024</h3>
+            <p>International winter school on quantum computing technologies hosted at Mehran University of Engineering & Technology (MUET) Jamshoro, Pakistan. Bring together quantum computing enthusiasts, researchers, and professionals for hands-on training and knowledge sharing.</p>
+            <p style="margin-top: 1rem;"><strong>Venue:</strong> National Centre for Robotics and Automation: Condition Monitoring Systems (NCRA-CMS) Labs, MUET Jamshoro</p>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <!-- SETUP: Sign up free at buttondown.email, then replace "quantumbeads" below with your Buttondown username -->
+    <section class="newsletter" id="newsletter">
+        <div class="newsletter-content">
+            <h2>The Quantum Digest</h2>
+            <p>Fortnightly clarity on quantum computing — what's real, what's hype, and what matters for your organisation. No spam, ever.</p>
+            <form
+                action="https://buttondown.email/api/emails/embed-subscribe/quantumbeads"
+                method="post"
+                target="popupwindow"
+                onsubmit="window.open('https://buttondown.email/quantumbeads', 'popupwindow')"
+                class="newsletter-form">
+                <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
+                <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+            <p class="newsletter-note">Fortnightly. Free. Unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2>Let's Talk Quantum</h2>
+        <p>Considering quantum computing for your organisation? Want to upskill your team? Exploring a research collaboration? We'd love to hear from you.</p>
+        <div class="contact-links">
+            <a href="mailto:contact@quantumbeads.com" class="contact-link">Email Us</a>
+            <a href="https://www.linkedin.com/company/QuantumBeads" target="_blank" class="contact-link">LinkedIn</a>
+            <a href="fatah-jamro.html" class="contact-link">Our Team</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="html/about.html">About Us</a></li>
+                        <li><a href="fatah-jamro.html">Our Team</a></li>
+                        <li><a href="blogs/blogs.html">Research</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blogs/blogs.html">Insights</a></li>
+                        <li><a href="events/events.html">Events</a></li>
+                        <li><a href="fatah-jamro.html">Publications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/company/QuantumBeads" target="_blank">LinkedIn</a></li>
+                        <li><a href="mailto:contact@quantumbeads.com">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024-2026 QuantumBeads. All rights reserved.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Quantum Computing Consultancy & Research | Galway, Ireland</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
 </html>

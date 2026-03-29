@@ -7,18 +7,24 @@ ISSUE_BODY = os.environ.get("ISSUE_BODY", "")
 ISSUE_NUMBER = os.environ.get("ISSUE_NUMBER")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 REPO = os.environ.get("REPO")
-
 # 1. Extract the pure text from the GitHub Issue
 try:
     parts = ISSUE_BODY.split("---")
     if len(parts) >= 3:
-        # Rejoin everything between our top and bottom dividers
-        clean_text = "---".join(parts[1:-1]).strip()
-        
-        # Strip out Gemini's introductory conversational text
-        clean_text = clean_text.replace("Here's a highly technical yet accessible LinkedIn post for C-suite executives on a recent quantum computing advancement:", "").strip()
+        # Rejoin everything between our top and bottom GitHub issue dividers
+        raw_draft = "---".join(parts[1:-1]).strip()
     else:
-        clean_text = ISSUE_BODY.strip()
+        raw_draft = ISSUE_BODY.strip()
+        
+    # 2. Sever the sources from the final post
+    if "---SOURCES---" in raw_draft:
+        clean_text = raw_draft.split("---SOURCES---")[0].strip()
+    else:
+        clean_text = raw_draft
+        
+    # Strip out any conversational introductory text Gemini might add
+    clean_text = clean_text.replace("Here's a highly technical yet accessible LinkedIn post for C-suite executives on a recent quantum computing advancement:", "").strip()
+    
 except Exception:
     clean_text = ISSUE_BODY.strip()
 

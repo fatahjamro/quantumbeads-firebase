@@ -9,7 +9,12 @@ REPO = os.environ.get("GITHUB_REPOSITORY")
 url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
 headers = {'Content-Type': 'application/json'}
 
-prompt = "Search the web for a major, factual advancement in quantum computing from the past 7 days. Write a highly technical but accessible LinkedIn post for C-suite executives. You MUST include the exact URLs of your sources at the end of the post."
+prompt = """Search the web for a major, factual advancement in quantum computing from the past 7 days. 
+Write a highly technical but accessible LinkedIn post for C-suite executives. 
+CRITICAL CONSTRAINTS:
+1. The post body MUST be strictly under 1600 characters. Be concise and authoritative.
+2. After the post body, you MUST type the exact text '---SOURCES---' on a new line.
+3. Below '---SOURCES---', list the exact URLs of your research."""
 
 data = {
     "contents": [{"parts":[{"text": prompt}]}],

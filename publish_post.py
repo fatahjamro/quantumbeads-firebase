@@ -19,7 +19,7 @@ url = "https://api.linkedin.com/rest/posts"
 
 headers = {
     "Authorization": f"Bearer {ACCESS_TOKEN}",
-    "LinkedIn-Version": "2024-01", # This header is strictly required for the new endpoint
+    "LinkedIn-Version": "202401", # This header is strictly required for the new endpoint
     "X-Restli-Protocol-Version": "2.0.0",
     "Content-Type": "application/json"
 }

@@ -76,7 +76,7 @@ post_data = {
         "thirdPartyDistributionChannels": []
     },
     "lifecycleState": "PUBLISHED",
-    "isResreshareDisabledByAuthor": False
+    "isReshareDisabledByAuthor": False  # <-- THE TYPO IS FIXED HERE
 }
 
 li_response = requests.post(linkedin_url, headers=linkedin_headers, json=post_data, timeout=30)

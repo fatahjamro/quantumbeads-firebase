@@ -2,7 +2,7 @@ import os
 import requests
 
 ACCESS_TOKEN = os.environ.get("LINKEDIN_ACCESS_TOKEN")
-ORG_ID = os.environ.get("LINKEDIN_ORG_ID")
+ORG_ID = os.environ.get("LINKEDIN_ORG_ID", "").strip()
 ISSUE_BODY = os.environ.get("ISSUE_BODY")
 ISSUE_NUMBER = os.environ.get("ISSUE_NUMBER")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")

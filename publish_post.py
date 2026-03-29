@@ -10,8 +10,16 @@ REPO = os.environ.get("REPO")
 
 # 1. Extract the pure text from the GitHub Issue
 try:
-    clean_text = ISSUE_BODY.split("---")[1].strip()
-except IndexError:
+    parts = ISSUE_BODY.split("---")
+    if len(parts) >= 3:
+        # Rejoin everything between our top and bottom dividers
+        clean_text = "---".join(parts[1:-1]).strip()
+        
+        # Strip out Gemini's introductory conversational text
+        clean_text = clean_text.replace("Here's a highly technical yet accessible LinkedIn post for C-suite executives on a recent quantum computing advancement:", "").strip()
+    else:
+        clean_text = ISSUE_BODY.strip()
+except Exception:
     clean_text = ISSUE_BODY.strip()
 
 print("--- PRE-FLIGHT CHECK ---")

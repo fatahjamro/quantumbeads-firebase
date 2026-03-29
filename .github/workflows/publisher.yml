@@ -1,33 +1,30 @@
-name: Publish Approved LinkedIn Post
+name: Publish Approved Post (Tuesday Queue)
+
 on:
-  issue_comment:
-    types: [created] # Triggers whenever a new comment is added to an issue
+  schedule:
+    # Wakes up at 08:00 UTC every Tuesday (09:00 Galway time)
+    - cron: '0 8 * * 2'
+  workflow_dispatch: # Keeps the manual run button for testing
 
 jobs:
   publish_to_linkedin:
-    # Only run if the comment is exactly "Approve" and the issue has the "linkedin-draft" label
-    if: github.event.comment.body == 'Approve' && contains(github.event.issue.labels.*.name, 'linkedin-draft')
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
-          
+          python-version: '3.x'
+
       - name: Install dependencies
         run: pip install requests
-        
-      - name: Run publishing script
+
+      - name: Run the Publisher Engine
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_ORG_ID: ${{ secrets.LINKEDIN_ORG_ID }}
-          ISSUE_BODY: ${{ github.event.issue.body }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
         run: python publish_post.py

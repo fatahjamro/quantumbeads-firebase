@@ -1,7 +1,7 @@
 name: Generate LinkedIn Draft
 on:
   schedule:
-    - cron: '0 8 * * 2,4' # Runs automatically at 08:00 UTC on Tuesdays and Thursdays
+    - cron: '0 18 * * 1' # Runs automatically at 018:00 UTC on Tuesdays 
   workflow_dispatch: # Allows you to trigger it manually via the Actions tab for testing
 
 jobs:

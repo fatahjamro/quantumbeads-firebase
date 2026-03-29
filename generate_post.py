@@ -21,7 +21,8 @@ data = {
     "tools": [{"googleSearch": {}}]
 }
 
-response = requests.post(url, headers=headers, json=data)
+# Call Gemini API with a 50-second timeout
+response = requests.post(url, headers=headers, json=data, timeout=50)
 post_content = response.json()['candidates'][0]['content']['parts'][0]['text']
 
 # 2. Create a GitHub Issue for your review
@@ -36,5 +37,6 @@ issue_data = {
     "labels": ["linkedin-draft"]
 }
 
-requests.post(issue_url, headers=issue_headers, json=issue_data)
+# Send to GitHub with a 50-second timeout
+requests.post(issue_url, headers=issue_headers, json=issue_data, timeout=50)
 print("Factual draft sent to GitHub Issues successfully.")

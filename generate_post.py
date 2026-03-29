@@ -13,14 +13,15 @@ prompt = """Search the web for a major, factual advancement in quantum computing
 Write a highly technical but accessible LinkedIn post tailored for C-suite executives overseeing R&D, Deep-Tech, and Strategic Innovation. 
 
 CRITICAL CONSTRAINTS:
-1. TONE & STYLE: Write in a grounded, authoritative, and humanised voice using British English spelling. STRICT BAN on AI buzzwords, clichéd transitions, and fluff (e.g., absolutely do not use "delve," "game-changer," "tapestry," "revolutionary," or "in today's rapidly evolving landscape"). State the facts cleanly.
-2. NO EMAIL FORMATTING: Do NOT use "Subject:" or "Title:". Start directly with a bold, one-sentence executive hook.
-3. LENGTH: The post body MUST be strictly under 2000 characters. Break up long paragraphs for easy mobile reading.
-4. THE SIGN-OFF: At the very end of the post, you MUST include this exact call-to-action:
-   "Stay tuned follow QuantumBeads for weekly enterprise intelligence."
-5. HASHTAGS: Include exactly 3 high-level hashtags below the sign-off (e.g., #QuantumComputing #DeepTech #EnterpriseStrategy).
-6. CITATION DIVIDER: Immediately after the hashtags, you MUST type the exact text '---SOURCES---' on a new line.
-7. THE SOURCES: Below '---SOURCES---', list the Publication Name, Article Title, Date, and clean root domain (e.g., 'IBM Research (ibm.com)'). STRICT BAN: Do not output any 'vertexaisearch' or 'google' redirect URLs."""
+1. TONE & STYLE: Write in a grounded, authoritative, and humanised voice using British English spelling. STRICT BAN on AI buzzwords, clichéd transitions, and fluff. State the facts cleanly.
+2. PLAIN TEXT ONLY: STRICT BAN on Markdown formatting. Do NOT use asterisks (**) or underscores (_) for bolding or italics anywhere in the text. Output 100% pure plain text.
+3. NO EMAIL FORMATTING: Do NOT use "Subject:" or "Title:". Start directly with a bold, one-sentence executive hook (in plain text).
+4. LENGTH: The post body MUST be strictly under 2000 characters. Break up long paragraphs for easy mobile reading.
+5. THE SIGN-OFF: At the very end of the post, you MUST include this exact call-to-action:
+   "Follow QuantumBeads for weekly quantum & enterprise insights."
+6. HASHTAGS: Include exactly 3 high-level hashtags below the sign-off (e.g., #QuantumComputing #DeepTech #EnterpriseStrategy).
+7. CITATION DIVIDER: Immediately after the hashtags, you MUST type the exact text '---SOURCES---' on a new line.
+8. THE SOURCES: Below '---SOURCES---', list the Publication Name, Article Title, Date, and clean root domain. STRICT BAN: Do not output any 'vertexaisearch' or 'google' redirect URLs."""
 
 data = {
     "contents": [{"parts":[{"text": prompt}]}],

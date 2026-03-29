@@ -12,10 +12,10 @@ headers = {'Content-Type': 'application/json'}
 prompt = """Search the web for a major, factual advancement in quantum computing from the past 7 days. 
 Write a highly technical but accessible LinkedIn post for C-suite executives. 
 CRITICAL CONSTRAINTS:
-1. The post body MUST be strictly under 1500 characters. Be concise and authoritative.
+1. The post body MUST be strictly under 2000 characters. Be concise and authoritative.
 2. After the post body, you MUST type the exact text '---SOURCES---' on a new line.
-3. Below '---SOURCES---', list the Publication Name, Article Title, Date, and the clean root domain (e.g., 'IBM Research (ibm.com)'). 
-4. STRICT BAN: You are strictly forbidden from outputting any 'vertexaisearch' or 'google' redirect URLs. Extract and provide only the clean, original source information."""
+3. Below '---SOURCES---', list the Publication Name, Article Title, Date, and the clean root domain (e.g., 'IBM Research (ibm.com)'), etc. 
+4. STRICT BAN: You are strictly forbidden from outputting any 'vertexaisearch' or 'google' redirect URLs. Extract and provide only the clean, original source information. """
 data = {
     "contents": [{"parts":[{"text": prompt}]}],
     "tools": [{"googleSearch": {}}]

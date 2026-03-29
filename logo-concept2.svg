@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480">
+  <defs>
+    <linearGradient id="qbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="480" fill="#0a0a1a"/>
+
+  <!-- QB Monogram Symbol -->
+  <g transform="translate(200, 175)">
+    <!-- Q: Main circle ring -->
+    <circle cx="0" cy="0" r="72" fill="none" stroke="url(#qbGrad)" stroke-width="7"/>
+
+    <!-- Q: Orbital arc crossing diagonally -->
+    <ellipse cx="0" cy="0" rx="95" ry="35" fill="none" stroke="url(#qbGrad)" stroke-width="5.5" transform="rotate(-35)"/>
+
+    <!-- B: Upper curve on the right -->
+    <path d="M 12,-52 Q 62,-52 62,-18 Q 62,8 20,8" fill="none" stroke="url(#qbGrad)" stroke-width="6.5" stroke-linecap="round"/>
+
+    <!-- B: Lower curve on the right -->
+    <path d="M 20,8 Q 68,8 68,40 Q 68,68 12,62" fill="none" stroke="url(#qbGrad)" stroke-width="6.5" stroke-linecap="round"/>
+
+    <!-- B: Vertical spine (subtle, merging with Q circle) -->
+    <line x1="14" y1="-54" x2="14" y2="62" stroke="url(#qbGrad)" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="200" y="320" text-anchor="middle" fill="white" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="36" letter-spacing="1">
+    <tspan font-weight="300">Quantum</tspan><tspan font-weight="600">Beads</tspan>
+  </text>
+
+  <!-- Tagline -->
+  <text x="200" y="352" text-anchor="middle" fill="#b0b0cc" font-family="-apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" letter-spacing="3" text-transform="uppercase">
+    QUANTUM COMPUTING CONSULTANCY
+  </text>
+</svg>

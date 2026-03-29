@@ -1,0 +1,34 @@
+name: Generate LinkedIn Draft
+on:
+  schedule:
+    - cron: '0 8 * * 2,4' # Runs automatically at 08:00 UTC on Tuesdays and Thursdays
+  workflow_dispatch: # Allows you to trigger it manually via the Actions tab for testing
+
+jobs:
+  draft_post:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write # Crucial: Allows the action to create a GitHub Issue for your review
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          
+      - name: Install dependencies
+        run: pip install requests
+        
+      - name: Run generation script
+        env:
+          # This maps your custom GitHub Secret to the environment variable
+          G_STUDIO_LINKEDIN_POSTING_API: ${{ secrets.G_STUDIO_LINKEDIN_POSTING_API }}
+          
+          # This token is provided automatically by GitHub to create the issue
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          
+          # Optional: Add your Unsplash key here if you are using the image feature
+          # UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+        run: python generate_post.py

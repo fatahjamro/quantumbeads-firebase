@@ -8,42 +8,41 @@ ISSUE_NUMBER = os.environ.get("ISSUE_NUMBER")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 REPO = os.environ.get("REPO")
 
-# --- DIAGNOSTIC MONITOR ---
-print("--- PRE-FLIGHT CHECK ---")
-print(f"Raw ORG_ID from GitHub Vault: '{ORG_ID}'")
-print(f"Target Author URN: urn:li:organization:{ORG_ID}")
-print("------------------------")
-# --------------------------
-
+# 1. Extract the post content
 try:
     clean_text = ISSUE_BODY.split("---")[1].strip()
 except IndexError:
     clean_text = ISSUE_BODY.strip()
 
-url = "https://api.linkedin.com/v2/ugcPosts"
+# 2. Use the Modern LinkedIn REST Endpoint (Bypasses the legacy UGC errors)
+url = "https://api.linkedin.com/rest/posts"
+
 headers = {
     "Authorization": f"Bearer {ACCESS_TOKEN}",
+    "LinkedIn-Version": "2024-01", # This header is strictly required for the new endpoint
     "X-Restli-Protocol-Version": "2.0.0",
     "Content-Type": "application/json"
 }
 
 post_data = {
     "author": f"urn:li:organization:{ORG_ID}",
-    "lifecycleState": "PUBLISHED",
-    "specificContent": {
-        "com.linkedin.ugc.ShareContent": {
-            "shareCommentary": {"text": clean_text},
-            "shareMediaCategory": "NONE"
-        }
+    "commentary": clean_text,
+    "visibility": "PUBLIC",
+    "distribution": {
+        "feedDistribution": "MAIN_FEED",
+        "targetEntities": [],
+        "thirdPartyDistributionChannels": []
     },
-    "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"}
+    "lifecycleState": "PUBLISHED",
+    "isReshareDisabledByAuthor": False
 }
 
 response = requests.post(url, headers=headers, json=post_data)
 
 if response.status_code == 201:
-    print("Successfully posted to LinkedIn!")
+    print("Successfully posted to LinkedIn using modern REST API!")
     
+    # 3. Close the GitHub Issue cleanly
     issue_url = f"https://api.github.com/repos/{REPO}/issues/{ISSUE_NUMBER}"
     issue_headers = {
         "Authorization": f"token {GITHUB_TOKEN}",

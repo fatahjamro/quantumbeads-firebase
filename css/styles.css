@@ -57,14 +57,15 @@ nav .nav-container {
 }
 
 nav .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     text-decoration: none;
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 42px;
+    width: auto;
+    display: block;
 }
 
 nav ul {

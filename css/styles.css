@@ -60,12 +60,23 @@ nav .logo {
     text-decoration: none;
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
-nav .logo img {
-    height: 42px;
+nav .logo .logo-icon {
+    height: 36px;
     width: auto;
     display: block;
+}
+
+nav .logo .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
 }
 
 nav ul {

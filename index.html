@@ -64,12 +64,23 @@
             text-decoration: none;
             display: flex;
             align-items: center;
+            gap: 0.5rem;
         }
 
-        nav .logo img {
-            height: 42px;
+        nav .logo .logo-icon {
+            height: 36px;
             width: auto;
             display: block;
+        }
+
+        nav .logo .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
         }
 
         nav ul {
@@ -757,7 +768,10 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="index.html" class="logo"><img src="webimages/logo-quantumbeads-web.png" alt="QuantumBeads"></a>
+            <a href="index.html" class="logo">
+                <img src="webimages/logo-quantubeads-new-white1.svg" alt="QB" class="logo-icon">
+                <span class="logo-text">QuantumBeads</span>
+            </a>
             <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
             <ul>
                 <li><a href="#home">Home</a></li>

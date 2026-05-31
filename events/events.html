@@ -7,6 +7,55 @@
     <title>Events & Workshops - QuantumBeads | Quantum Computing Training</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="icon" href="../webimages/logo-favicon-quantumbeadsnew1.ico">
+    <style>
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .workshop-card {
+            background: rgba(26, 26, 62, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.75rem;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+        .workshop-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 8px 24px rgba(0, 212, 255, 0.12);
+        }
+        .workshop-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        .workshop-card h4 {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .workshop-card p {
+            color: var(--text-secondary);
+            font-size: 0.93rem;
+            line-height: 1.6;
+        }
+        .section-intro {
+            margin-top: 0.5rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .delivery-note {
+            margin-top: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+            padding: 0.75rem 1.25rem;
+            border-left: 3px solid var(--accent-purple);
+            background: rgba(124, 58, 237, 0.05);
+            border-radius: 0 6px 6px 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -40,13 +89,13 @@
         <!-- Events Intro -->
         <section class="about-section">
             <h3>Quantum Training That Meets You Where You Are</h3>
-            <p>We design and deliver workshops tailored to your team's experience level, from executives who need to understand quantum's strategic implications to engineers ready to dive into algorithm design. Our training is grounded in active research, so you're learning from someone who works on quantum computing daily — not reading from a textbook.</p>
+            <p>We design and deliver practical, focused workshops tailored to your team's background and goals. Whether your leadership needs a clear understanding of how quantum computing impacts strategy, or your technical teams want hands-on exposure to algorithms and frameworks, we provide training that is directly relevant to your organisation.</p>
             <p style="margin-top: 1rem;"><strong style="color: var(--accent-blue);">Interested in booking a workshop for your team or organisation?</strong> Get in touch at <a href="mailto:contact@quantumbeads.com" style="color: var(--accent-blue);">contact@quantumbeads.com</a></p>
         </section>
 
         <!-- Winter School 2024 -->
         <section class="event-item">
-            <div class="event-date">January 17-18, 2024</div>
+            <div class="event-date">January, 2024</div>
             <h3>International Winter School 2024 on Quantum Computing Technologies</h3>
 
             <div style="margin: 2rem 0; padding: 1.5rem; background: rgba(0, 212, 255, 0.05); border-left: 3px solid var(--accent-blue); border-radius: 6px;">
@@ -86,17 +135,33 @@
             </div>
         </section>
 
-        <!-- Upcoming Events Section -->
+        <!-- Workshop Topics Section -->
         <section class="about-section">
             <h3>Available Workshop Topics</h3>
-            <p>We offer workshops on the following topics, customised to your team's needs and experience level:</p>
-            <ul style="margin-left: 2rem; margin-top: 1rem; color: var(--text-secondary);">
-                <li style="margin: 0.5rem 0;">Introduction to Quantum Computing — for teams new to quantum</li>
-                <li style="margin: 0.5rem 0;">Quantum Circuits & Programming — hands-on coding with Qiskit</li>
-                <li style="margin: 0.5rem 0;">Quantum Error Correction — understanding noise and fault tolerance</li>
-                <li style="margin: 0.5rem 0;">Quantum for Business Leaders — strategic overview without the jargon</li>
-            </ul>
-            <p style="margin-top: 1rem;">Each workshop can be delivered remotely or in person, for half-day, full-day, or multi-day formats.</p>
+            <p class="section-intro">Our workshops are designed to build real understanding and practical capability. Each topic can be tailored to your team's level and objectives.</p>
+            <div class="workshop-grid">
+                <div class="workshop-card">
+                    <div class="icon">⚛️</div>
+                    <h4>Introduction to Quantum Computing</h4>
+                    <p>A clear, accessible overview of core concepts, applications, and why quantum matters today, for teams at any starting point.</p>
+                </div>
+                <div class="workshop-card">
+                    <div class="icon">💻</div>
+                    <h4>Quantum Circuits & Programming</h4>
+                    <p>Hands-on sessions using Qiskit to build and run quantum circuits and basic algorithms. No prior quantum experience required.</p>
+                </div>
+                <div class="workshop-card">
+                    <div class="icon">🛠️</div>
+                    <h4>Quantum Error Correction</h4>
+                    <p>Explore noise, decoherence, and how fault-tolerant quantum systems are designed, a deep-dive for technical teams.</p>
+                </div>
+                <div class="workshop-card">
+                    <div class="icon">📊</div>
+                    <h4>Quantum for Business Leaders</h4>
+                    <p>Strategic insights into opportunities, risks, and timelines, clear and actionable, without unnecessary technical detail.</p>
+                </div>
+            </div>
+            <p class="delivery-note">Workshops are available remotely or on-site, in half-day, full-day, or multi-day formats. Contact us to discuss what works best for your team.</p>
         </section>
 
         <!-- Why Attend Section -->

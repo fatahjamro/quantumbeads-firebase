@@ -182,10 +182,10 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-size: clamp(2.5rem, 6vw, 4rem);
             margin-bottom: 1rem;
-            line-height: 1.2;
-            font-weight: 900;
+            line-height: 1.3;
+            font-weight: 800;
             letter-spacing: -1px;
         }
 
@@ -263,7 +263,7 @@
         }
 
         .section-header h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2rem, 3vw, 2rem);
             margin-bottom: 0.5rem;
             font-weight: 800;
         }
@@ -275,16 +275,16 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
         }
 
         .service-card {
             background: rgba(26, 26, 62, 0.5);
             border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 2rem;
+            padding: 1rem;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -615,7 +615,7 @@
         }
 
         .newsletter h2 {
-            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-size: clamp(1.8rem, 3vw, 2rem);
             font-weight: 800;
             margin-bottom: 0.75rem;
         }
@@ -786,7 +786,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Let's make Quantum Computing make Sense.</h1>
+            <h1>Let's make quantum computing make sense.</h1>
             <div class="hero-tagline">Research | Workshops | Consulting</div>
             <p>Most organisations know quantum computing matters. Few know what to do about it. We help you figure that out without the noise.</p>
             <div class="cta-buttons">
@@ -797,7 +797,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services" id="services">
+    <section class="services" id="services" style="scroll-margin-top: 80px;">
         <div class="section-header">
             <h2>How We Help</h2>
             <p>Making quantum computing accessible to organisations and teams</p>
@@ -811,7 +811,7 @@
             <div class="service-card">
                 <div class="service-icon">📚</div>
                 <h3>Workshops & Training</h3>
-                <p>Hands-on workshops tailored for your team's level, from introductory quantum concepts to advanced topics like error correction and algorithm design. We've trained participants across continents.</p>
+                <p>Hands-on workshops tailored for your team's level, from introductory quantum concepts and circuit programming to advanced topics like cryptography and error correction. We also offer strategic sessions for business leaders. We've trained participants across continents.</p>
             </div>
             <div class="service-card">
                 <div class="service-icon">🔬</div>
@@ -866,8 +866,7 @@
             </div>
             <div style="display: flex; flex-direction: column; gap: 1.5rem;">
                 <!-- Fatah -->
-                <a href="fatah-jamro.html" style="text-decoration: none; color: inherit; display: block;">
-                <div class="founder-info" style="cursor: pointer; transition: border-color 0.3s, transform 0.3s;" onmouseover="this.style.borderColor='var(--accent-blue)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='';this.style.transform=''">
+                <div class="founder-info" style="cursor: pointer; transition: border-color 0.3s, transform 0.3s;" onclick="window.location='fatah-jamro.html'" onmouseover="this.style.borderColor='var(--accent-blue)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='';this.style.transform=''">
                     <img src="webimages/fatah.png" alt="Abdul Fatah Jamro" class="founder-image">
                     <div class="founder-name">Abdul Fatah Jamro</div>
                     <div class="founder-title">Co-Founder & CTO</div>
@@ -878,10 +877,8 @@
                         </a>
                     </div>
                 </div>
-                </a>
                 <!-- Lala Rukh -->
-                <a href="lalarukh.html" style="text-decoration: none; color: inherit; display: block;">
-                <div class="founder-info" style="cursor: pointer; transition: border-color 0.3s, transform 0.3s;" onmouseover="this.style.borderColor='var(--accent-purple)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='';this.style.transform=''">
+                <div class="founder-info" style="cursor: pointer; transition: border-color 0.3s, transform 0.3s;" onclick="window.location='lalarukh.html'" onmouseover="this.style.borderColor='var(--accent-purple)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='';this.style.transform=''">
                     <img src="webimages/lalarukh-profile-image.jpeg" alt="Lala Rukh" class="founder-image">
                     <div class="founder-name">Lala Rukh</div>
                     <div class="founder-title">Co-Founder & CEO</div>
@@ -892,7 +889,6 @@
                         </a>
                     </div>
                 </div>
-                </a>
             </div>
         </div>
     </section>
@@ -904,7 +900,7 @@
             <p>Connect with the quantum computing community</p>
         </div>
         <div class="event-card">
-            <div class="event-date">January 17-18, 2024</div>
+            <div class="event-date">January, 2024</div>
             <h3>Quantum Computing Winter School 2024</h3>
             <p>International winter school on quantum computing technologies hosted at Mehran University of Engineering & Technology (MUET) Jamshoro, Pakistan. Bring together quantum computing enthusiasts, researchers, and professionals for hands-on training and knowledge sharing.</p>
             <p style="margin-top: 1rem;"><strong>Venue:</strong> National Centre for Robotics and Automation: Condition Monitoring Systems (NCRA-CMS) Labs, MUET Jamshoro</p>

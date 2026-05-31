@@ -7,6 +7,86 @@
     <title>Insights - QuantumBeads | Quantum Computing Articles</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="icon" href="../webimages/logo-favicon-quantumbeadsnew1.ico">
+    <style>
+        .insights-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            align-items: start;
+        }
+        .insights-sidebar {
+            position: sticky;
+            top: 80px;
+        }
+        .sidebar-heading {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .sidebar-card {
+            padding: 1rem;
+            background: rgba(26, 26, 62, 0.5);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            transition: border-color 0.25s;
+        }
+        .sidebar-card:hover {
+            border-color: var(--accent-blue);
+        }
+        .sidebar-badge {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            background: rgba(0, 212, 255, 0.08);
+            border: 1px solid var(--accent-blue);
+            padding: 0.15rem 0.5rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 0.6rem;
+        }
+        .sidebar-card h4 {
+            font-size: 0.88rem;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+            line-height: 1.4;
+            font-weight: 600;
+        }
+        .sidebar-card .sidebar-authors {
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.6rem;
+        }
+        .sidebar-card .read-link {
+            font-size: 0.8rem;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .sidebar-card .read-link:hover {
+            color: var(--accent-purple);
+        }
+        .insights-main {
+            min-width: 0;
+        }
+        @media (max-width: 900px) {
+            .insights-layout {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            .insights-sidebar {
+                position: static;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -28,27 +108,45 @@
     </nav>
 
     <!-- Page Hero -->
-    <section class="about-page-hero" style="position: relative;">
+    <section class="about-page-hero" style="min-height: auto; padding: 2.5rem 2rem;">
         <div class="hero-content">
-            <h1>Insights</h1>
-            <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 1rem;">Exploring quantum technologies, algorithms, and practical applications</p>
-            <p style="margin-top: 1.5rem; font-size: 0.95rem; color: var(--accent-blue); letter-spacing: 0.05em;">8 articles below ↓</p>
-        </div>
-        <div style="position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); animation: bounce 2s infinite;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6">
-                <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
+            <h1 style="font-size: 2rem;">Insights</h1>
+            <p style="font-size: 1rem; color: var(--text-secondary); margin-top: 0.5rem;">Exploring quantum technologies, algorithms, and practical applications</p>
         </div>
     </section>
-    <style>
-        @keyframes bounce {
-            0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(6px); }
-        }
-    </style>
 
     <!-- Main Content -->
-    <main class="blogs-page">
+    <main>
+        <div class="insights-layout">
+
+        <!-- LEFT SIDEBAR: Featured External Articles -->
+        <aside class="insights-sidebar">
+            <div class="sidebar-heading">Featured External Articles</div>
+
+            <div class="sidebar-card">
+                <span class="sidebar-badge">Engineers Ireland</span>
+                <h4>Quantum Dreams: What the 2025 Nobel Prize in Physics Tells Us</h4>
+                <p class="sidebar-authors">By <a href="../fatah-jamro.html" style="color:var(--accent-blue);text-decoration:none;">Abdul Fatah Jamro</a> &amp; <a href="../lalarukh.html" style="color:var(--accent-purple);text-decoration:none;">Lala Rukh</a></p>
+                <a href="https://www.engineersireland.ie/Engineers-Journal/More/Editors-choice/quantum-dreams-what-the-2025-nobel-prize-in-physics-and-others-tells-us-about-the-future-we-are-building" target="_blank" class="read-link">Read Article →</a>
+            </div>
+
+            <div class="sidebar-card">
+                <span class="sidebar-badge">Engineers Ireland</span>
+                <h4>From Quantum Dots to Quantum Computers</h4>
+                <p class="sidebar-authors">By <a href="../fatah-jamro.html" style="color:var(--accent-blue);text-decoration:none;">Abdul Fatah Jamro</a> &amp; <a href="../lalarukh.html" style="color:var(--accent-purple);text-decoration:none;">Lala Rukh</a></p>
+                <a href="https://www.engineersireland.ie/Engineers-Journal/Technology/from-quantum-dots-to-quantum-computers" target="_blank" class="read-link">Read Article →</a>
+            </div>
+
+            <div class="sidebar-card">
+                <span class="sidebar-badge">Engineers Ireland</span>
+                <h4>Debunking the Quantum Computer Myths in 'Heart of Stone'</h4>
+                <p class="sidebar-authors">By <a href="../fatah-jamro.html" style="color:var(--accent-blue);text-decoration:none;">Abdul Fatah Jamro</a> &amp; <a href="../lalarukh.html" style="color:var(--accent-purple);text-decoration:none;">Lala Rukh</a></p>
+                <a href="https://www.engineersireland.ie/Engineers-Journal/Technology/debunking-the-quantum-computer-myths-in-heart-of-stone" target="_blank" class="read-link">Read Article →</a>
+            </div>
+        </aside>
+
+        <!-- RIGHT: Blog Posts -->
+        <div class="insights-main blogs-page">
         <!-- Blog Post: Practical Realization of Qubit -->
         <article class="blog-post">
             <div class="blog-author">
@@ -218,13 +316,6 @@
             </div>
         </article>
 
-        <!-- Featured Research Section -->
-        <section class="about-section">
-            <h3>Our Featured Research</h3>
-            <p>Explore our latest publication on Quantum Latin Squares and their applications in quantum error correction and hardware verification.</p>
-            <a href="../fatah-jamro.html" class="btn btn-primary" style="margin-top: 1rem; display: inline-block;">View Publications</a>
-        </section>
-
         <!-- Newsletter signup at end of article -->
         <!-- SETUP: Replace "quantumbeads" with your Buttondown username after signing up at buttondown.email -->
         <section class="newsletter">
@@ -240,9 +331,11 @@
                     <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
                     <button type="submit" class="newsletter-btn">Subscribe</button>
                 </form>
-                <p class="newsletter-note">Fortnightly. Free. Unsubscribe anytime.</p>
+                <p class="newsletter-note">Free. Unsubscribe anytime.</p>
             </div>
         </section>
+        </div><!-- end insights-main -->
+        </div><!-- end insights-layout -->
     </main>
 
     <!-- Footer -->
@@ -275,7 +368,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2024-2026 QuantumBeads. All rights reserved.</p>
-                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Quantum Computing Consultancy & Research | Galway, Ireland</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">Quantum Computing Research & Consultancy | Galway, Ireland</p>
             </div>
         </div>
     </footer>

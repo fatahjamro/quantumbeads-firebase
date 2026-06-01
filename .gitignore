@@ -1,3 +1,61 @@
+# ----------------------------
+# 🔥 System / OS files
+# ----------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# 🔥 VS Code settings (local only)
+# ----------------------------
+.vscode/
+
+# ----------------------------
+# 🔥 Firebase local state / debug
+# ----------------------------
+.firebase/
+firebase-debug.log
+firebaserc.local
+
+# ----------------------------
+# 🔥 Node / package files (if unused in deploy)
+# ----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ----------------------------
+# 🔥 Python cache (you have .py scripts)
+# ----------------------------
+__pycache__/
+*.pyc
+
+# ----------------------------
+# 🔥 Temporary / generated files
+# ----------------------------
+*.tmp
+*.log
+*.swp
+
+# ----------------------------
+# 🔥 Secrets / env (IMPORTANT)
+# ----------------------------
+.env
+.env.local
+.env.*
+
+# ----------------------------
+# 🔥 Editor / tooling noise
+# ----------------------------
+*.eslintcache
+*.lock
+
+# ----------------------------
+# 🔥 Build outputs (if you add later)
+# ----------------------------
+dist/
+build/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof

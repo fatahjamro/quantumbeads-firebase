@@ -3,7 +3,8 @@
 # ----------------------------
 .DS_Store
 Thumbs.db
-
+DESIGN.md
+package-lock.json
 # ----------------------------
 # 🔥 VS Code settings (local only)
 # ----------------------------

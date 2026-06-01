@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="QuantumBeads: Quantum Computing Consultancy & Research. We help organisations navigate quantum computing through expert consulting, hands-on workshops, and applied research in quantum information theory.">
-    <meta name="keywords" content="quantum computing, quantum consulting, quantum workshops, quantum training, quantum research, quantum education">
     <meta name="author" content="Abdul Fatah Jamro">
     <title>QuantumBeads | Quantum Computing Consultancy & Research</title>
     <link rel="icon" href="webimages/logo-favicon-quantumbeadsnew1.ico">
@@ -872,7 +871,7 @@
                     <div class="founder-title">Co-Founder & CTO</div>
                     <p style="color: var(--text-secondary); margin-bottom: 1rem;">PhD Candidate in Quantum Computing | ATU Galway, Ireland<br>B.E. & M.E. in Electronics Engineering | 5+ years industry experience</p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/fatahjamro/" target="_blank" title="LinkedIn" onclick="event.stopPropagation()">
+                        <a href="https://www.linkedin.com/in/fatahjamro/" target="_blank" rel="noopener noreferrer" title="LinkedIn" onclick="event.stopPropagation()">
                             <img src="webimages/LinkedInlogo.png" alt="LinkedIn">
                         </a>
                     </div>
@@ -884,7 +883,7 @@
                     <div class="founder-title">Co-Founder & CEO</div>
                     <p style="color: var(--text-secondary); margin-bottom: 1rem;">PhD Candidate | University of Galway, Ireland<br>Energy in Buildings · Climate Science · Digital GreenTalents Award Winner</p>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/lalarukhfatah/" target="_blank" title="LinkedIn" onclick="event.stopPropagation()">
+                        <a href="https://www.linkedin.com/in/lalarukhfatah/" target="_blank" rel="noopener noreferrer" title="LinkedIn" onclick="event.stopPropagation()">
                             <img src="webimages/LinkedInlogo.png" alt="LinkedIn">
                         </a>
                     </div>
@@ -919,7 +918,8 @@
                 target="popupwindow"
                 onsubmit="window.open('https://buttondown.email/quantumbeads', 'popupwindow')"
                 class="newsletter-form">
-                <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
+                <label for="newsletter-email" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Email address</label>
+                    <input id="newsletter-email" type="email" name="email" placeholder="your@email.com" required class="newsletter-input">
                 <button type="submit" class="newsletter-btn">Subscribe</button>
             </form>
             <p class="newsletter-note"> Free. Unsubscribe anytime.</p>
@@ -934,8 +934,8 @@
             📧 <a href="mailto:contact@quantumbeads.com" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">contact@quantumbeads.com</a>
         </p>
         <div class="contact-links" style="margin-top: 1.5rem;">
-            <a href="https://www.linkedin.com/company/QuantumBeads" target="_blank" class="contact-link">LinkedIn</a>
-            <a href="fatah-jamro.html" class="contact-link">Our Team</a>
+            <a href="https://www.linkedin.com/company/QuantumBeads" target="_blank" rel="noopener noreferrer" class="contact-link">LinkedIn</a>
+            <a href="html/about.html" class="contact-link">Meet the Team</a>
         </div>
     </section>
 
@@ -947,7 +947,7 @@
                     <h4>About</h4>
                     <ul>
                         <li><a href="html/about.html">About Us</a></li>
-                        <li><a href="fatah-jamro.html">Our Team</a></li>
+                        <li><a href="html/about.html">Meet the Team</a></li>
                         <li><a href="blogs/blogs.html">Research</a></li>
                     </ul>
                 </div>
@@ -962,7 +962,7 @@
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <ul>
-                        <li><a href="https://www.linkedin.com/company/QuantumBeads" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://www.linkedin.com/company/QuantumBeads" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
                         <li><a href="mailto:contact@quantumbeads.com">Contact</a></li>
                     </ul>
                 </div>
